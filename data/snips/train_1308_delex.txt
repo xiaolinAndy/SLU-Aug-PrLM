@@ -1,0 +1,1308 @@
+for _object_select_ _object_type_ i give a posiabble _rating_value_ of _best_rating_
+rate _music_item_ to _playlist_owner_ _artist_ _playlist_
+is there a _object_name_
+book a table somewhere in _country_ for _timeRange_
+book a spot that is _spatial_relation_ from the _poi_ _timeRange_
+i need a table at a _restaurant_type_ in _state_ for _party_size_description_
+please search the _object_name_ _object_type_
+_object_type_ at _location_name_
+_party_size_description_ want to dine in _country_ _timeRange_
+weather at _timeRange_ in _state_
+please give me _object_type_
+book a _restaurant_type_ with _facility_ for _party_size_description_
+put _entity_name_ onto _playlist_owner_ _playlist_ playlist
+what s the weather in _country_
+play _sort_ _artist_ songs on _service_
+rate _object_name_ _rating_value_ _rating_unit_ out of _best_rating_
+is _condition_description_ in _city_
+_object_name_ gets a _rating_value_ out of _best_rating_
+play the _music_item_ _track_ on _service_
+what _movie_type_ are playing _location_name_
+play the _object_name_ _object_type_
+what is the _condition_description_ forecast for _timeRange_ in _state_
+where is the _spatial_relation_ _object_location_type_ that is showing _movie_name_
+add _entity_name_ to _playlist_ playlist
+find the _object_type_ for _location_name_
+i want to hear some _year_ music from _artist_
+find the _object_type_ _object_name_
+find a _object_type_ called _object_name_
+find _timeRange_ _object_type_ at _location_name_
+where can i find the _object_type_ called _object_name_
+give _rating_value_ _rating_unit_ to _object_name_ _object_part_of_series_type_
+play _service_ _sort_ _music_item_ by _artist_
+put _entity_name_ onto _playlist_
+rate _object_select_ _object_type_ only _rating_value_ _rating_unit_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+i would rate the _object_name_ a _rating_value_ and a best rating of _best_rating_
+play a _year_ _music_item_ on _service_
+rate my _object_select_ _object_type_ _rating_value_ out of _best_rating_
+i want a _music_item_ by _artist_ in the _playlist_ playlist
+play music by _artist_
+what s _location_name_ _object_type_
+book a reservation for a _restaurant_type_ in _state_ _timeRange_
+play _track_ on _service_
+would you please play me a _music_item_ from _year_
+play _track_ by _artist_
+what s the temperature _timeRange_ in _city_ _state_
+_party_size_description_ want to go to a _restaurant_type_ _spatial_relation_ from _city_ that serves _cuisine_
+find a table at a _restaurant_type_ with _cuisine_ food in _state_
+what _movie_type_ are at _location_name_
+play some _year_ music
+what time is _movie_name_ showing at _location_name_
+is there _condition_description_ forecast for _city_ on _timeRange_
+is _movie_name_ playing at _timeRange_
+which _object_location_type_ is playing _movie_name_
+play _object_name_ _object_type_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+please find a _restaurant_type_ in _city_ _state_ that has room for _party_size_number_
+put on _service_ and play _genre_
+is there a _object_type_ about _object_name_
+what is the forecast for _city_ in _country_
+i need to know is it _condition_temperature_ in _state_ at _timeRange_
+please tell me what the _object_type_ looks like for the _location_name_ _timeRange_
+is the weather _condition_temperature_ in _state_
+rate _object_name_ a _rating_value_
+tell me the weather forecast for _country_ _timeRange_
+what s the _object_type_ at _location_name_
+show _object_name_
+find the _object_type_ _object_name_
+book a reservation for _party_size_number_ people in _state_
+give _rating_value_ out of _best_rating_ _rating_unit_ to _object_select_ _object_part_of_series_type_
+what _object_location_type_ is showing _movie_name_ at _timeRange_
+i want to hear the _sort_ _music_item_ from _artist_
+i think _object_select_ _object_type_ is only good for _rating_value_ _rating_unit_
+play _track_ by _artist_ on _service_
+rate _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+play me a _year_ _artist_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+add _entity_name_ to he _playlist_ playlist
+add _artist_ _music_item_ to _playlist_owner_ playlist _playlist_
+tell me the weather forecast for _city_ _state_
+is there supposed to be _condition_description_ at _timeRange_ at _geographic_poi_ or anywhere _spatial_relation_
+give _rating_value_ _rating_unit_ to _object_name_
+play some _artist_ songs from the _year_
+find the _object_name_ _object_type_
+find the _object_type_ for _movie_name_
+where can i get a _object_type_ of _object_name_
+what time is _movie_name_ at _location_name_ playing
+need a table at a _restaurant_type_ serving _served_dish_ on _timeRange_ for _party_size_number_ at _state_
+add _artist_ _music_item_ in _playlist_
+play a _year_ _music_item_ by the _artist_ on _service_
+what _object_type_ are _spatial_relation_ for _movie_type_
+play the _sort_ music from _artist_
+i need to add another _music_item_ to _playlist_owner_ _playlist_ playlist
+add an _music_item_ to _playlist_owner_ _playlist_ playlist
+i need to make a reservation at a _sort_ _cuisine_ _restaurant_type_ in _city_ that is _spatial_relation_ and can seat _party_size_number_
+rate _object_select_ _object_type_ _rating_value_ out of _best_rating_
+book a spot for _party_size_number_ in _timeRange_
+play _artist_ s _music_item_ from the _year_
+_object_select_ _object_type_ gets _rating_value_ star
+find _object_name_ a _object_type_
+there is _condition_description_ in _city_ _country_
+need find the _object_type_ called _object_name_
+open _service_ and play _album_ from _artist_
+i give _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+find _object_type_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+add _artist_ to the _playlist_ playlist
+add to playlist _playlist_ _entity_name_
+find a _object_type_ called _object_name_
+where can i find the _object_type_ _object_name_
+add a _music_item_ to _playlist_owner_ playlist _playlist_
+play _music_item_ music from the _year_ by _artist_
+add this _music_item_ to _playlist_
+what s the weather like _timeRange_ in _city_
+what will the weather be in _timeRange_ at my _current_location_
+rate the _object_select_ _object_type_ _rating_value_ of _best_rating_
+please make a _restaurant_type_ reservation for somewhere in _city_ _state_
+play _album_ by _artist_
+add to _playlist_owner_ list the _music_item_ _playlist_
+play some _artist_ from the _year_ on _service_
+what _movie_type_ are showing _spatial_relation_
+will there be a _condition_description_ in _state_ _timeRange_
+play some _genre_ on _service_
+show me _movie_type_ that are playig at _location_name_
+how do i rate _object_select_ _object_type_ _rating_value_ stars
+what is the _timeRange_ forecast for _country_
+add _music_item_ to _playlist_owner_ _playlist_
+i need a _restaurant_type_ that can accommodate a party of _party_size_number_ in _city_
+find _object_name_
+what s the weather _current_location_
+show creativity of _object_name_ _object_type_
+find the _object_type_
+can i get _movie_name_ showtimes
+turn on _service_ to play _year_
+is it going to be _condition_temperature_ in _state_ _timeRange_
+_timeRange_ what will the weather be like in _city_
+rate the _object_type_ _object_part_of_series_type_ _object_name_ a _rating_value_
+rate _object_name_ _rating_value_ _rating_unit_
+find a _object_type_ called _object_name_
+give the _object_select_ _object_type_ a _rating_value_
+search for _object_name_
+i d like to visit a _restaurant_type_ with a _facility_ at _timeRange_
+what is the weather forecast for _city_ _country_
+what is the forecast for _condition_temperature_ weather _current_location_
+find _object_type_ for me
+add _music_item_ to _playlist_
+in _country_ will there be _condition_description_ in _city_
+i m looking to get reservations for _party_size_description_ at a _restaurant_type_ that is _spatial_relation_ from _state_
+book a spot for _party_size_number_ at a _restaurant_type_ in _country_
+help me find the work titled _object_name_
+find me the _object_type_ _object_name_
+which _location_name_ is playing _movie_name_
+play _track_ by _artist_ on _service_
+add _artist_ to _playlist_
+i want reservations at a _restaurant_type_ in _city_ for _timeRange_
+i think the _object_select_ _object_type_ should get a _rating_value_ out of _best_rating_ rating
+this _object_select_ _object_type_ is worth _rating_value_
+rate _object_select_ _object_type_ _rating_value_ of _best_rating_
+i want to book a _restaurant_type_ for _timeRange_ in _city_ for _party_size_number_
+i m looking for you to get me _object_name_
+put _artist_ on _playlist_owner_ _playlist_ playlist
+can you find me the _object_type_ titled _object_name_
+where can i view the _object_type_ of _object_name_
+play the music _playlist_
+get me the _object_type_ from _object_name_
+what _movie_type_ are playing _timeRange_ at the _spatial_relation_ _object_location_type_
+book a reservation for _party_size_number_ at a _restaurant_type_ that serves _served_dish_ in _country_
+rate the _object_type_ _object_name_ a _rating_value_
+show me the _object_type_ for _object_name_
+what s the weather forecast for _city_
+play _artist_ s _album_ on _service_
+add a _artist_ _music_item_ to the _playlist_ playlist
+will there be a _condition_description_ this _timeRange_ in _city_ _state_
+rate _object_name_ _rating_value_ _rating_unit_
+what is the forecast for _condition_description_ weather _current_location_
+i want the _object_type_ for _movie_type_ _spatial_relation_
+show _object_name_ _object_type_
+what s the weather looking like in _city_ at _timeRange_
+find the _object_type_ for _movie_name_
+i d like to eat at a _restaurant_type_ in _state_ with a party of _party_size_number_
+find a _location_name_ showing _movie_type_
+show _object_type_ _timeRange_
+open _service_ and play _track_ from _artist_
+book a _restaurant_type_ for _served_dish_ _spatial_relation_ _poi_ and _spatial_relation_
+when is _movie_name_ playing at _location_name_
+add _artist_ to _playlist_owner_ _playlist_ playlist
+what are the _object_type_
+the _playlist_ playlist needs _entity_name_ in it
+i want to give _object_name_ _rating_value_ _rating_unit_
+when is _movie_name_ showing at the _object_location_type_
+tell me if it will be _condition_temperature_ on _timeRange_ in _city_ _country_
+add a _artist_ _music_item_ to _playlist_owner_ _playlist_
+what is the forecast in _city_
+_restaurant_type_ _cuisine_ in _country_
+i give the _object_name_ _object_part_of_series_type_ _rating_value_ out of _best_rating_
+add _artist_ to _playlist_owner_ playlist called _playlist_
+what _object_type_
+where is _object_type_ _object_name_
+find the _object_type_ _object_name_
+i d like to eat at a _restaurant_type_ that serves _served_dish_ with a party of _party_size_number_
+i would like a _restaurant_type_ at _timeRange_ for _party_size_number_
+add this _music_item_ by _artist_ to the _playlist_ playlist
+rate _object_select_ _object_type_ _rating_value_ _rating_unit_
+put _entity_name_ on _playlist_
+find a _object_type_ called _object_name_
+is there a _condition_description_ _current_location_
+have _service_ play songs from the _year_
+find the _object_type_ _object_name_
+play some _genre_ music on _service_
+i want to find a _sort_ _restaurant_type_ in _city_ _state_ for _party_size_number_ _timeRange_
+add a _artist_ _music_item_ to the _playlist_ playlist
+_object_name_ gets a rating of _rating_value_
+is it _condition_temperature_ in _state_
+find a _object_type_ called _object_name_
+weather for _timeRange_ in _city_
+book a reservation for _party_size_number_ at a _restaurant_type_ serving _served_dish_
+find _object_type_ in _location_name_
+rate _object_name_ _rating_value_ _rating_unit_ out of _best_rating_
+i need a weather update _timeRange_ for _geographic_poi_
+can you get me seating for a party of _party_size_number_
+rate _object_name_ _object_part_of_series_type_ _rating_value_ _rating_unit_ out of _best_rating_
+play the _music_item_ _track_
+rate the _object_name_ _object_part_of_series_type_ _rating_value_ of _best_rating_ _rating_unit_
+play the _sort_ _music_item_ from _artist_
+play some _genre_
+is _movie_name_ playing _timeRange_ at the _object_location_type_
+will it be raining _timeRange_ ion _city_ _country_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+find a _object_type_ called _object_name_
+play a _year_ _music_item_ by _artist_ on _service_
+find me the _object_type_ titled _object_name_
+put this _music_item_ onto the _playlist_ playlist
+play _artist_ s _music_item_
+add this _music_item_ to _playlist_owner_ playlist named _playlist_
+find me a _object_type_ by _object_name_
+show me some _object_type_
+play playlist _playlist_
+i d like a table for _party_size_number_ at a _restaurant_type_ in _city_ _state_ that has _cuisine_
+where can i find the _object_type_ _object_name_
+what is the _object_type_ for _movie_type_ _spatial_relation_
+play some _genre_ music
+check the forecast for _city_ _state_
+what time is _movie_name_ playing
+play the _sort_ _year_ _music_item_
+what is the weather forecast for _geographic_poi_ _timeRange_
+add the _music_item_ to the _playlist_ playlist
+play _music_item_ from _artist_
+book a table for _party_size_number_ people at a _restaurant_type_ with _facility_
+show me the _object_type_ of _movie_type_ in _location_name_
+show creativity of _object_name_
+play _object_name_
+find _object_name_ a _object_type_
+give the _object_select_ _object_type_ _rating_value_ / _best_rating_ _rating_unit_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+rate _object_select_ _object_type_ _rating_value_ of _best_rating_
+find the _object_type_ _object_name_
+play music from _service_
+_timeRange_ i d like reservations at a _restaurant_type_ that serves _cuisine_ food in _city_
+when is _movie_name_ playing at the _spatial_relation_ _object_location_type_
+i want to book a _restaurant_type_ in _city_ _state_
+_artist_ should be moved to _playlist_owner_ _playlist_ playlist
+i want to book a _restaurant_type_ _spatial_relation_ _poi_ at _timeRange_
+play _year_ _music_item_ music on _service_
+i give the _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+i want to find _object_name_
+i d like to find the _object_name_ _object_type_
+play _playlist_ playlist
+is it _condition_temperature_ in _city_ _state_
+read _object_name_
+what are the _object_type_ for _movie_type_ premiering _spatial_relation_
+please find the _object_type_ _object_name_
+play _music_item_ and sort the _sort_ in _artist_
+i think the _object_name_ deserves _rating_value_ _rating_unit_
+i d like a table for _party_size_number_ at a _spatial_relation_ place in _city_
+what is the _spatial_relation_ _object_location_type_ playing _movie_name_
+where can i find the _object_name_
+show me the _object_type_ _object_name_
+can i hear _artist_ s _sort_ music on _service_
+can you search _object_name_
+the _object_part_of_series_type_ _object_name_ is a _rating_value_
+book a table at _restaurant_name_ in _city_ _state_
+add _artist_ songs in _playlist_owner_ playlist _playlist_
+add _artist_ to _playlist_owner_ _playlist_ playlist
+is _movie_name_ playing at _timeRange_ at _location_name_
+add another _music_item_ to the _playlist_ playlist
+please add _playlist_ _entity_name_ to _playlist_owner_ playlist
+book a _sort_ _restaurant_type_ in _city_
+check _movie_type_ screened at the _spatial_relation_ _object_location_type_
+what will it be like in the _current_location_ at _timeRange_
+i d like to see _object_name_
+what is the _spatial_relation_ _object_location_type_ playing _movie_name_
+play _year_ on _service_
+play _track_ by _artist_ on _service_
+i want _playlist_ to have _artist_ added to it
+will it be _condition_temperature_ in _state_
+add _entity_name_ to the _playlist_ playlist
+what _movie_type_ are playing at the _spatial_relation_ _object_location_type_
+when is _movie_name_ playing at the _object_location_type_
+give the _object_select_ _object_part_of_series_type_ _rating_value_ / _best_rating_ _rating_unit_
+add _music_item_ to _playlist_
+rate _object_name_ _rating_value_ out of _best_rating_
+give _object_select_ _object_type_ a _rating_value_
+play music from the _year_
+i need to book a table at a _restaurant_type_ spot that serves _served_dish_ in _state_
+i d give _object_name_ _rating_value_ _rating_unit_ out of _best_rating_
+play the _sort_ music by _artist_
+where can i find the _object_type_ _object_name_
+play a _music_item_ from _year_
+add this _music_item_ to _playlist_owner_ _playlist_ playlist
+i want to know the _movie_type_ playing at the _spatial_relation_ _object_location_type_
+add the _music_item_ to _playlist_owner_ _playlist_ playlist
+what _movie_type_ are at _location_name_
+please help me find the _object_name_ _object_type_
+play _artist_ s _music_item_ _album_ on _service_
+show _object_type_ for _movie_type_ _spatial_relation_
+where can i find _object_name_
+find the _object_type_ for _spatial_relation_ _movie_type_
+rate _object_select_ _object_type_ a _rating_value_
+play all music _artist_ released in _year_
+play the _music_item_ _track_
+i d like to know what _movie_type_ are scheduled at _location_name_
+where is _movie_name_ playing
+whats the _spatial_relation_ _object_location_type_ that shows _movie_type_ at _timeRange_
+find a table at a _restaurant_type_ that serves _served_dish_ in _country_
+when is _movie_name_ playing at the _object_location_type_
+rate the _object_select_ _object_type_ _rating_value_ of _best_rating_ _rating_unit_
+add a _artist_ _music_item_ in _playlist_owner_ _playlist_ playlist
+please give _rating_value_ _rating_unit_ to _object_name_
+when is _movie_name_ scheduled to be played
+play _year_ _music_item_
+rate the _object_select_ _object_type_ a _rating_value_
+play _artist_ from _year_
+play something from the _year_ on _service_
+what is the weather forecast for _city_
+what time is _movie_name_ playing at the _object_location_type_
+i wish to rate _rating_value_ _rating_unit_ out of _best_rating_ to _object_name_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+find a _object_type_ called _object_name_
+i would give the _object_name_ _object_part_of_series_type_ _rating_value_ _rating_unit_
+i need a reservation for _restaurant_name_ _spatial_relation_ from _state_ for a party of _party_size_number_
+_object_type_ for _movie_type_ _spatial_relation_
+what s the weather forecast for _city_
+play the _sort_ _music_item_ from the _year_
+what is the _object_type_ for the _location_name_
+when is _movie_name_ playing at _location_name_
+what will be the forecast for _country_ in the future around _timeRange_
+show creative _object_type_ of _object_name_
+i need a table at a _restaurant_type_ serving _served_dish_ for _party_size_description_
+will it get _condition_description_ in _city_
+what is the weather _spatial_relation_ to _city_ on _timeRange_
+is it _condition_temperature_ at _geographic_poi_
+rate _object_name_ a _rating_value_
+look up _object_name_
+i d like to go to the _restaurant_name_ in _country_ party of _party_size_number_
+play music from _year_
+play music from the _genre_ genre on _service_
+add _entity_name_ to _playlist_owner_ playlist named _playlist_
+show _object_type_
+is it _condition_temperature_ _spatial_relation_ from my _current_location_
+find me _object_name_
+my group of _party_size_number_ wants to eat at _restaurant_name_ in _city_ _timeRange_
+find the _object_type_
+i d like to take a party of _party_size_number_ _timeRange_ to a place in _state_
+find me the _object_type_ _object_name_
+find a _object_type_ called _object_name_
+where can i watch _movie_name_
+play _track_ by _artist_
+please play the _sort_ _music_item_ from _year_ by _artist_
+this _object_select_ _object_type_ deserves _rating_value_ _rating_unit_
+lets hear some _year_ music
+will it be _condition_temperature_ _timeRange_ in _state_
+play _object_name_ _object_type_
+play my _playlist_ playlist
+add _music_item_ to _playlist_owner_ _playlist_
+play _genre_
+play music by _artist_
+show me _object_name_
+what is the _city_ forecast
+what is the weather forecast for _country_ _city_
+how is _spatial_relation_ _condition_description_ at _timeRange_ in _city_
+i give the _object_name_ _object_part_of_series_type_ _rating_value_ out of _best_rating_
+rate _object_name_ _rating_value_
+rate the _object_type_ _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+play some _year_ music on _service_
+the _playlist_ playlist needs _artist_ in it
+what will the weathr be in _city_ _country_
+what time is _movie_name_ showing
+add _music_item_ to _playlist_owner_ _playlist_ playlist
+what is the _condition_description_ forecast for _timeRange_ in _state_
+i need _object_type_
+what _movie_type_ are playing _spatial_relation_ right _timeRange_
+book a spot for _party_size_number_ in _state_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+rate _object_select_ _object_type_ _rating_value_ _rating_unit_
+weather in _geographic_poi_ _spatial_relation_ _condition_temperature_
+where is the _spatial_relation_ _object_location_type_ playing _movie_type_ _timeRange_
+is _movie_name_ at _location_name_
+can you play the _sort_ songs by _artist_
+add _artist_ to _playlist_ playlist
+book a _cuisine_ _restaurant_type_ for _party_size_number_ that s _sort_ _spatial_relation_ as _country_
+is _movie_name_ playing at _location_name_
+book a table for _party_size_number_ in _country_ _timeRange_
+i want to read the _object_type_ _object_name_
+add the _music_item_ to _playlist_owner_ _playlist_ playlist
+book me a _timeRange_ at _restaurant_name_ for a party of _party_size_number_
+help me find _object_name_
+play that _sort_ _music_item_ from _year_
+add the _music_item_ _artist_ to _playlist_owner_ _playlist_ playlist
+fine _object_type_ for _location_name_
+add the _music_item_ _playlist_ to _playlist_owner_ _artist_ playlist
+give _object_select_ _object_part_of_series_type_ a _rating_value_ out of _best_rating_ rating
+what time is _movie_name_ playing
+play _artist_ on _service_
+when will _movie_name_ be playing at the _spatial_relation_ _object_location_type_
+i d like to eat _timeRange_ at a _spatial_relation_ _poi_ _restaurant_type_
+find a _object_type_ called _object_name_
+play _playlist_
+find the _object_type_ _object_name_
+look for the _object_type_ _object_name_
+where can i get _object_type_
+will it be _condition_temperature_ _spatial_relation_ _city_ _timeRange_
+when is _movie_name_ playing at the _object_location_type_
+give _rating_value_ _rating_unit_ to _object_part_of_series_type_ _object_name_
+i gave _object_name_ _rating_value_ of _best_rating_ _rating_unit_
+_object_name_ nets _rating_value_ out of _best_rating_
+find a _object_type_ called _object_name_
+show a _object_type_ with _location_name_
+book reservations at a _spatial_relation_ _restaurant_type_ in _poi_ at _timeRange_ time
+play _music_item_ music from the _year_
+book a _restaurant_type_ for _party_size_number_ in _city_
+rate _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+rate _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+book a table for _party_size_number_ at _restaurant_name_ at _timeRange_
+find a table for _party_size_number_ at a _restaurant_type_ in _country_
+rate _object_name_ _rating_value_ of _best_rating_ _rating_unit_
+add _artist_ to _playlist_owner_ _playlist_ playlist
+play a _music_item_ from _year_
+what s the weather forecast for _state_ for _timeRange_
+book a table for _party_size_number_ at a _sort_ _restaurant_type_ _spatial_relation_ of _restaurant_type_ _state_
+rate _object_select_ _object_type_ _rating_value_ _rating_unit_
+add the _music_item_ _artist_ to _playlist_owner_ _playlist_ playlist
+give _object_select_ _object_type_ a rating of _rating_value_
+rate _object_select_ _object_part_of_series_type_ _rating_value_ _rating_unit_
+i need to book a table at _restaurant_name_ that s _spatial_relation_ from my place in _city_
+add this _music_item_ to _playlist_owner_ _playlist_ playlist
+show _condition_temperature_ conditions _timeRange_ in _city_
+rate _object_select_ _object_part_of_series_type_ _rating_value_ _rating_unit_
+what is the _object_type_
+make me a reservation for _party_size_description_ in _country_
+play a _sort_ _music_item_ of _year_
+find a _object_type_ called _object_name_
+give _rating_value_ out of _best_rating_ _rating_unit_ to _object_select_ _object_part_of_series_type_
+is _movie_name_ playing at the _spatial_relation_ _object_location_type_ _timeRange_
+play music by _artist_ from _year_
+i want to book a _restaurant_type_ with a _facility_ for _party_size_number_ in _city_
+book a table for _party_size_number_ at _restaurant_name_
+add _playlist_ in playlist _entity_name_
+what is the weather in _city_
+find a _object_type_ called _object_name_
+find _object_name_
+play _album_ by _artist_
+what will the weather be like this _timeRange_ _spatial_relation_ _country_
+will it get _condition_temperature_ in _city_ _state_
+can you make reservations for _party_size_number_ people somewhere _spatial_relation_ from _poi_
+play _artist_ on _service_
+find the _object_name_ _object_type_
+the _playlist_ needs _entity_name_ in it
+give me the weather forecast for _geographic_poi_
+add _artist_ to _playlist_
+what will the weather be like _timeRange_ _spatial_relation_ in _geographic_poi_
+play some _music_item_ from _year_
+tell me if it ll be _condition_description_ at _timeRange_ in my _current_location_
+i want to book a _restaurant_type_ in _city_ that serves _cuisine_
+find _object_name_ a _object_type_
+find a _object_type_ called _object_name_
+i need seating for _party_size_number_ people at a _restaurant_type_ that serves _cuisine_ cuisine
+add _artist_ to the _playlist_ soundtrack
+i am giving this _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+plpay my _playlist_ playlist
+play some _genre_ music
+book a spot for _party_size_number_ in _city_ _state_ on _timeRange_
+add _artist_ to _playlist_
+find the _object_type_ for _movie_name_ at the _spatial_relation_ _object_location_type_
+what time does the next _movie_type_ play _spatial_relation_
+show _object_name_ _object_type_
+rate _object_select_ _object_type_ _rating_value_
+is it going to be _condition_temperature_ _current_location_ for _timeRange_
+is the _object_type_ _object_name_ streaming anywhere
+what is the forecast for _current_location_ at _timeRange_
+add a _music_item_ from _artist_ to _playlist_owner_ _playlist_ playlist
+book a spot for _party_size_description_ at a _sort_ _restaurant_type_ that is _spatial_relation_ from _poi_ on _timeRange_ that serves _cuisine_
+play _track_ by _artist_
+rate _object_name_ _rating_value_ _rating_unit_ out of _best_rating_
+can you find the _object_type_ _object_name_
+put _artist_ in _playlist_ please
+what time does _movie_name_ play in _location_name_
+find a _object_type_ called _object_name_
+find the _object_type_ for _location_name_
+add _artist_ to the _playlist_ playlist
+add _artist_ to _playlist_owner_ _playlist_
+please find the _object_type_ _object_name_
+book a _restaurant_type_ that serves _served_dish_ in _state_ for _party_size_number_ at _timeRange_
+find the _object_type_ for _movie_name_ at a _object_location_type_
+can you rate this _object_select_ _object_type_ with _rating_value_ _rating_unit_
+show the _movie_type_ at the _spatial_relation_ _object_location_type_
+what is the weather _timeRange_ in _city_
+find _object_type_
+book a table for _party_size_number_ at a _sort_ _restaurant_type_
+add a _music_item_ by _artist_ to _playlist_owner_ playlist called _playlist_
+i think _object_select_ _object_type_ should be rated _rating_value_ _rating_unit_
+play _service_ _year_ by _artist_
+_object_name_ deserves a solid _rating_value_
+i want to hear _artist_ s songs from the _year_
+my _object_select_ _object_type_ should have a rating value of _rating_value_ and a best rating of _best_rating_
+show me the _object_type_ _object_name_
+will it be _condition_temperature_ _spatial_relation_ by _current_location_ at _timeRange_
+show the _object_type_ for _movie_type_ _spatial_relation_
+i d like to watch _movie_name_ at the _object_location_type_
+what is the weather in _state_ the city of _city_
+play some _genre_ music
+tell me whether _country_ will be _condition_description_ _timeRange_
+i want to hear a _year_ _music_item_
+put _artist_ in _playlist_owner_ _playlist_ playlist
+can you add something by _artist_ to _playlist_owner_ _playlist_ playlist
+i think that _object_select_ _object_type_ deserves _rating_value_ _rating_unit_
+give _object_select_ _object_type_ _rating_value_ _rating_unit_
+play music from the _year_
+_object_name_ is _rating_value_ out of _best_rating_ _rating_unit_
+play _track_ by _artist_
+find _object_name_
+what s the weather like _spatial_relation_ in _state_
+_object_select_ _object_type_ only gets _rating_value_ out of _best_rating_ _rating_unit_
+add _entity_name_ to _playlist_owner_ _playlist_
+play music by artist _artist_
+what is the forecast for _condition_temperature_ temps in _country_ in _city_
+use _service_ to play _album_
+play some _year_ _artist_ on _service_
+put any _artist_ _music_item_ onto _playlist_
+show me the _object_name_ _object_type_
+rate _object_name_ _rating_value_ of _best_rating_
+find a _object_type_ called _object_name_
+is it _condition_description_ in _country_
+play the _sort_ _artist_ _music_item_ on _service_
+add a _artist_ _music_item_ to the _playlist_ playlist
+i need a reservation for a _restaurant_type_ place for a party of _party_size_number_
+i d like to see a _movie_type_ at the _spatial_relation_ _object_location_type_
+looking for the _object_type_ the _object_name_
+tell me where i can watch _movie_name_
+find the _object_type_ _object_name_
+will it be _condition_temperature_ _timeRange_ in _geographic_poi_
+find a reservation at _timeRange_ at a _restaurant_type_ for _party_size_number_ people
+give a _rating_value_ to _object_name_
+play a _music_item_ by _artist_
+for _object_select_ _object_type_ i rate _rating_value_ _rating_unit_
+book the _restaurant_name_ for _party_size_number_ people
+i want to find a _served_dish_ _restaurant_type_ in _city_ _state_
+is it _condition_temperature_ at _timeRange_ in _country_
+is there a _condition_description_ in _city_ _state_
+find a _object_location_type_ showing _movie_name_ _spatial_relation_ at _timeRange_
+play the _object_name_ _object_type_
+show creativity of _object_name_
+play _genre_ music
+please show me the _object_type_ _object_name_
+play a _music_item_ by _artist_
+i m looking for the _object_type_ _object_name_
+i require a reservation for _party_size_number_ at the most _sort_ _restaurant_type_ in _country_
+book a party for _party_size_number_ at a _restaurant_type_ with _served_dish_ in _state_ _timeRange_
+i would give _object_name_ _rating_value_ _rating_unit_ and a best rating of _best_rating_
+play any _music_item_ from _year_
+ad _music_item_ to _playlist_ _playlist_owner_ playlist
+for the _location_name_ is _movie_name_ playing _timeRange_
+i d like to watch the _object_type_ _object_name_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+please use _service_ to play a _music_item_ from _year_
+i am rating _object_select_ _object_type_ _rating_value_ _rating_unit_
+book a reservation for a _restaurant_type_
+play a _music_item_ by _artist_ from _year_ from the _sort_
+rate the _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+play _track_ by _artist_
+what s the weather forecast _spatial_relation_ to _city_ _timeRange_
+i want a _object_type_ of _object_name_
+i want to eat _served_dish_ at a _restaurant_type_ with _party_size_description_
+what time is _movie_name_ playing at _location_name_
+give the _object_select_ _object_type_ _rating_value_ _rating_unit_
+play my _playlist_ playlist on _service_
+what s the forecast for _state_ for _timeRange_
+find a _object_type_ called _object_name_
+play the _music_item_ _album_ by _artist_
+find the _object_name_ _object_type_
+put this _music_item_ on _playlist_owner_ playlist _playlist_
+edit _playlist_ put on _artist_
+need a table at a _restaurant_type_ for _party_size_description_ in _city_
+what _object_location_type_ is palying _movie_name_ _timeRange_
+play me the _object_type_ _object_name_
+how will be the weather in _city_ _timeRange_
+will it be _condition_temperature_ in _geographic_poi_ on _timeRange_
+book a _restaurant_type_ in _city_ that has _sort_ _cuisine_ for _party_size_number_
+book a _cuisine_ serving _restaurant_type_ in _state_
+open _service_ and play _artist_ _sort_ songs
+_object_select_ _object_type_ is _rating_value_ _rating_unit_
+i want to make a reservation for a group of _party_size_number_ at a _restaurant_type_ type _facility_
+find _movie_type_ _spatial_relation_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+i want to check out a _restaurant_type_ that has _facility_ in _city_
+will it be _condition_temperature_ _timeRange_ at _geographic_poi_
+show me the _object_type_ _object_name_
+what time is _movie_name_ playing _location_name_
+play a _music_item_ from the _year_ by _artist_
+can you play a _music_item_ from the _year_ by _artist_
+add this _music_item_ to _playlist_owner_ _playlist_ playlist
+find _movie_name_
+add the _music_item_ to _playlist_owner_ _playlist_ playlist
+i want to see the _object_type_ for _object_name_
+please find me the work _object_name_
+add _artist_ to _playlist_owner_ playlist called _playlist_
+search for the _object_type_ of _object_name_
+i m looking for a _object_type_ at the _location_name_
+play _track_ by _artist_
+play _artist_ from _year_
+play _artist_
+is it forecast to be _condition_temperature_ _spatial_relation_ _state_
+play _artist_ music from _year_
+play _track_ by _artist_
+how much _condition_temperature_ will it be once _spatial_relation_ to _country_
+what is the weather forecast _current_location_
+i want to book a reservation _spatial_relation_ of _city_ for _party_size_number_
+_object_type_ of _object_name_
+i need some _genre_ music
+give _rating_value_ _rating_unit_ / _best_rating_ to _object_name_
+add this _music_item_ to the _playlist_ playlist
+find _object_name_ a _object_type_
+_object_select_ _object_type_ deserves to be rated _rating_value_ out of _best_rating_
+play _album_ by _artist_
+show me the _object_type_ of movie _movie_name_ in _object_location_type_
+book for _party_size_description_ in _city_ at the _sort_ _restaurant_type_
+what is the weather in _city_
+play the _sort_ _music_item_ music from _year_
+find time for _movie_type_ at the _spatial_relation_ _object_location_type_
+please play some _genre_ music
+play _genre_
+how _condition_temperature_ will it be _current_location_ _timeRange_
+book _timeRange_ in _state_ at _restaurant_name_
+play the playlist _playlist_ on _service_
+what _movie_type_ are at _location_name_
+find the _object_type_ called _object_name_
+play _object_name_ _object_type_
+play the _object_type_ _object_name_
+play my _playlist_ playlist
+find _object_type_ _object_name_
+i d like to eat at an _facility_ _restaurant_type_
+show me a _object_type_ named _object_name_
+book a reservation for _restaurant_name_ on _timeRange_ in _country_
+find the _object_type_ for _movie_type_ _spatial_relation_
+i need a reservation for a _sort_ _restaurant_type_ for a party of _party_size_number_
+is _movie_name_ at the _object_location_type_
+play a _year_ _music_item_ by _artist_ on _service_
+what s the weather forecast for _country_ on _timeRange_
+add this _music_item_ to _playlist_owner_ _playlist_ playlist
+will it be _condition_description_ _spatial_relation_ from _city_
+add _artist_ to the _playlist_ playlist
+give _rating_value_ out od _best_rating_ _rating_unit_ to _object_name_
+rate _object_name_ _rating_value_ out of _best_rating_
+what s the weather forecast for _timeRange_ at my _current_location_
+rate _object_select_ _object_type_ _rating_value_ _rating_unit_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+i would like a table at a _restaurant_type_ with _served_dish_ for _timeRange_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+please book a _restaurant_type_ type _cuisine_ room accommodate for _party_size_number_ members _timeRange_ in _state_
+rate _object_select_ _object_type_ _rating_value_ of _best_rating_
+tell me the weather forecast for _city_ _state_
+will it be _condition_temperature_ _timeRange_ in _city_
+play music on the playlist _playlist_
+what will the weather be _timeRange_ in _state_
+put the _entity_name_ on _playlist_
+book at _restaurant_name_ on _timeRange_
+play the _object_type_ _object_name_
+rate _object_select_ _object_type_ _rating_value_ out of _best_rating_
+where to get _object_type_ _object_name_
+will you add _artist_ to _playlist_owner_ _playlist_ playlist
+i need seating at _restaurant_name_ in _state_ for a group of _party_size_number_
+please add _artist_ s _music_item_ onto the _playlist_ playlist
+i need a table for _party_size_number_ at a _restaurant_type_ that has a _served_dish_
+weather for _city_
+give _rating_value_ out of _best_rating_ to _object_select_ _object_type_
+find the _object_type_ for _movie_name_ at the _spatial_relation_ _object_location_type_
+give _rating_value_ out of _best_rating_ _rating_unit_ to _object_select_ _object_type_
+is it forecast to be _condition_temperature_ in _city_
+what is the weather like in _city_
+what time is _movie_name_ playing
+play me a _music_item_ from _year_
+what time is _movie_name_ playing
+add _entity_name_ to _playlist_owner_ _playlist_
+will there be _condition_description_ in _timeRange_ in _country_
+add a _music_item_ to the _playlist_ playlist
+what is the weather forecast for _geographic_poi_
+is it going to be _condition_temperature_ at _timeRange_ in _state_
+find _movie_type_ _object_type_ _spatial_relation_
+put _artist_ on _playlist_owner_ _playlist_ playlist
+out of a possible _best_rating_ _rating_unit_ i give _object_name_ a _rating_value_
+add _artist_ to _playlist_owner_ _playlist_ playlist
+open _service_ and find a movie with the _music_item_ _playlist_
+show creative _object_type_ of _object_name_
+i would give this _object_select_ _object_type_ _rating_value_ _rating_unit_
+please put _artist_ into _playlist_owner_ _playlist_ playlist
+what will the weather be in _state_ on _timeRange_
+i need to hear some music from _service_
+show me _movie_type_ _spatial_relation_
+play a _year_ _music_item_
+will it be _condition_description_ _timeRange_ _spatial_relation_ to the _geographic_poi_
+this _object_select_ _object_type_ should have a rating value of _rating_value_ and a best rating of _best_rating_
+what s the weather in _city_
+show me the _object_type_ _object_name_
+what is the forecasted _condition_description_ in _country_ for _timeRange_
+i give this _object_select_ _object_type_ _rating_value_ _rating_unit_
+what is the weather in _geographic_poi_ _timeRange_
+put this _artist_ _music_item_ onto _playlist_owner_ _playlist_ playlist
+show weather forecast at _timeRange_ in _city_
+what is the _object_type_ at _location_name_
+what time is _movie_name_ playing
+what is the _city_ weather forecast
+tell me if it will be _condition_description_ _current_location_
+will it be _condition_description_ in _country_ _timeRange_
+i need _genre_ _service_ to play
+please search for the _object_name_ _object_type_
+where can i see the _object_type_ for _object_name_
+will it be _condition_temperature_ in my _current_location_ _timeRange_
+add _entity_name_ to the _playlist_ playlist
+add _artist_ to _playlist_
+what time is _movie_name_ showing
+which _movie_type_ are playing at _location_name_
+what s the weather _timeRange_ in _city_ _country_
+what will the weather be _timeRange_ in _geographic_poi_
+what _location_name_ are playing _movie_type_
+i want seats for _party_size_number_ at a _restaurant_name_ _restaurant_type_ in _country_
+i would like to book a _served_dish_ _restaurant_type_ for _party_size_number_
+when and where is _movie_name_ playing
+book a _restaurant_type_ in _city_ for _party_size_number_ at _timeRange_
+search for _object_name_
+add this _music_item_ to the _playlist_ playlist
+give _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+rate _object_name_ _rating_value_ out of _best_rating_
+book a table in _state_ for _party_size_number_ for _timeRange_ at a _restaurant_type_ that serves _cuisine_
+book _restaurant_name_ for _party_size_description_ _spatial_relation_ from _poi_
+for the playlist _playlist_ add _entity_name_
+i need a table for _party_size_number_ at _restaurant_name_ _timeRange_
+weather for _geographic_poi_
+show _object_name_ _object_type_
+find the _object_type_ titled _object_name_
+i give _object_name_ _rating_value_ _rating_unit_
+give _rating_value_ / _best_rating_ _rating_unit_ to _object_name_
+rate _object_name_ _rating_value_ of _best_rating_ _rating_unit_
+find a _object_type_ called _object_name_
+rate _object_select_ _object_type_ _rating_value_ out of _best_rating_
+add the _music_item_ to the _playlist_ playlist
+book a table for _party_size_number_ people
+which _object_location_type_ _spatial_relation_ me is showing _movie_type_ starting _timeRange_
+rate _object_name_ _rating_value_ out of _best_rating_
+add _entity_name_ to _playlist_owner_ _playlist_
+add this _artist_ _music_item_ to _playlist_ _playlist_owner_ playlist
+is _movie_name_ at the _object_location_type_
+play _playlist_
+play some _genre_
+looking for _object_name_
+i need a _restaurant_type_ that has _facility_ access for a party of _party_size_number_
+can you find me the _object_name_ _object_type_
+rate _object_select_ _object_type_ _rating_value_ _rating_unit_
+i give the _object_select_ part of the _object_part_of_series_type_ _rating_value_ out of _best_rating_
+is the forecast _condition_temperature_ _timeRange_ in _city_
+this _object_select_ _object_type_ would get _best_rating_ _rating_unit_ or a rating value of _rating_value_
+i m looking to find _object_name_
+find a reservation for _party_size_number_ at a _sort_ _restaurant_type_
+find the _object_name_ _object_type_
+what local _object_location_type_ is playing _movie_name_
+give _rating_value_ out of _best_rating_ _rating_unit_ to _object_select_ _object_type_
+rate the _object_select_ _object_type_ with _rating_value_ _rating_unit_ out of _best_rating_
+_party_size_description_ want to eat at a _restaurant_type_ on _timeRange_
+the _object_select_ _object_type_ i m reading gets only a _rating_value_ out of _best_rating_
+look up the _object_type_ _object_name_
+find a _object_type_ called _object_name_
+rate _object_select_ _object_part_of_series_type_ _rating_value_ out of _best_rating_
+can you play _track_ on _service_
+add this _music_item_ to _playlist_
+rate the _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+i d like to watch _movie_name_
+what is the _state_ forecast for _condition_temperature_ weather
+play _track_ from _artist_
+rate the _object_type_ _object_name_ a _rating_value_
+will there be a _condition_description_ at _timeRange_ in _city_ _state_
+what is the _object_type_ for _movie_type_ playing _spatial_relation_
+give _object_name_ _object_part_of_series_type_ _rating_value_ _rating_unit_
+tell me the weather forecast for my _current_location_ on _timeRange_
+book reservation for _party_size_number_ people _timeRange_ in _city_
+play _artist_ songs from the _year_
+what s the weather forecast for _city_ _country_ on _timeRange_
+book a table for _party_size_description_ _timeRange_
+will it be _condition_description_ in _city_
+book me a reservation at an _restaurant_type_ that serves _served_dish_ for _party_size_number_ people
+i want to add _entity_name_ to _playlist_owner_ _playlist_ playlist
+can you put _entity_name_ on the playlist _playlist_
+add this _music_item_ to _playlist_owner_ _playlist_ playlist
+where can i find the _object_type_ for _object_name_
+add _artist_ to _playlist_
+what s the weather forecast for _city_
+what is the forecast for _timeRange_ in _state_
+search for _object_name_ _object_type_
+play _music_item_ from _artist_
+play _object_type_ _object_name_
+add this _music_item_ by _artist_ to _playlist_owner_ _playlist_ playlist
+give the _object_select_ _object_part_of_series_type_ a _rating_value_
+when are _movie_type_ playing at _location_name_
+will it be _condition_temperature_ in _city_ _country_
+i give the _object_part_of_series_type_ to _object_name_ _rating_value_ _rating_unit_ and a best rating of _best_rating_
+find the _object_type_ for _movie_name_ at a _object_location_type_
+i feel that _object_name_ deserves a rating of _rating_value_
+i want to hear something _playlist_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+_object_select_ is a _rating_value_ star _object_type_
+what s the _spatial_relation_ _object_location_type_ showing _movie_type_
+put a _music_item_ by _artist_ into _playlist_owner_ _playlist_ playlist
+i want the _object_type_ _object_name_
+what is the _object_type_ _object_name_
+play _album_ on _service_
+give me an _music_item_ from _year_ to listen to
+play _playlist_ on _service_
+she me the weather in the _current_location_ for _timeRange_
+play _year_ _music_item_ from _artist_ on _service_
+find _object_type_
+i want to add _entity_name_ to _playlist_owner_ playlist with the title _playlist_
+book a spot for _party_size_number_ in _country_
+play _track_ by _artist_
+i d like a _restaurant_type_ on _timeRange_ for _party_size_number_ people in _city_
+i want to play music off _service_
+whats the forecast for _country_
+give me the _object_type_ for _location_name_
+rate _object_select_ _object_part_of_series_type_ _rating_value_ point out of _best_rating_
+find _object_type_ for _movie_type_ _spatial_relation_
+is _movie_name_ playing at _timeRange_
+i want to see _movie_name_ at the _spatial_relation_ _object_location_type_
+what are the current _object_type_ for _location_name_
+where can i watch the _object_type_ of the _object_name_
+i need the weather at _timeRange_ for _geographic_poi_
+i need a reservation for a _restaurant_type_ _spatial_relation_ _poi_
+rate _object_select_ _object_type_ _rating_value_ _rating_unit_
+i want to book a table for _party_size_number_ at a _spatial_relation_ _restaurant_type_ in _country_
+please put the _music_item_ _artist_ in _playlist_owner_ _playlist_ playlist
+i rate _object_name_ a _rating_value_
+play _artist_ _music_item_ _track_
+will it be _condition_description_ in my _current_location_ at _timeRange_
+what s the weather forecast for _city_
+i would like to book at a _restaurant_type_ on _timeRange_ that is _spatial_relation_ to _poi_ for _party_size_description_
+please give me the forecast for _city_
+play _artist_ tunes now
+_country_ has _condition_temperature_ weather on _timeRange_
+can you add _entity_name_ to _playlist_
+what s the weather like _current_location_
+rate the _object_select_ _object_type_ a _rating_value_
+add _artist_ to the _playlist_ playlist
+add _artist_ to the _playlist_ playlist
+rate _object_name_ a _rating_value_
+play _album_ from _artist_
+book reservations at a _restaurant_type_ for _party_size_number_ people in _state_
+play my _playlist_
+for the _object_type_ _object_name_ i give _rating_value_ of a possiable _best_rating_ rating
+show creativity in _object_name_
+search for _object_name_
+will the sky be _condition_description_ around _timeRange_ in _state_
+add this _music_item_ to _playlist_
+book me a reservation for _restaurant_name_ _timeRange_ in _city_
+find me the _object_name_ _object_type_
+find _movie_name_ at _location_name_
+add _artist_ to _playlist_owner_ _playlist_ playlist
+what _object_location_type_ is showing _movie_name_ at _timeRange_
+find _object_type_
+rate the _object_part_of_series_type_ _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+_object_name_ deserves a solid _rating_value_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+show the _object_name_ _object_type_
+play a _music_item_ by _artist_ on _service_
+i wish to listen to _year_ music by _artist_
+play _artist_ on _service_
+where can i purchase the _object_type_ _object_name_
+get me reservations for an _facility_ _country_ _restaurant_type_
+what is the _condition_description_ forecast for _timeRange_ in _country_
+add _music_item_ to _playlist_
+what s the weather in _city_ in the _country_
+i need to book a _restaurant_type_ that serves _cuisine_ in _country_ for _party_size_number_
+play a _sort_ _music_item_ from the _year_ by _artist_
+play _playlist_
+i want the _artist_ _music_item_ to go on the playlist called _playlist_
+play some _genre_
+i d like to give a _rating_value_ rating to _object_name_
+play _music_item_ music from _artist_
+play _track_ by _artist_ on _service_
+what is the forecast for the _current_location_ for _condition_description_ on _timeRange_ _spatial_relation_
+can you find me the _object_type_ _object_name_
+find the _object_type_ _object_name_
+play genre _genre_
+give _rating_value_ star to _object_select_ _object_type_
+play some music on _service_
+tell me what _movie_type_ are playing _spatial_relation_
+find the _object_name_ _object_type_
+will it be _condition_temperature_ in _geographic_poi_
+book a spot _spatial_relation_ from the _poi_ on the _timeRange_
+_party_size_description_ will be in _state_ for food
+i m looking for the _object_type_ _object_name_
+find _object_name_
+put _artist_ on _playlist_owner_ _playlist_ playlist
+what s the weather forecast for _state_ right _timeRange_
+list _movie_type_ _spatial_relation_
+book a _served_dish_ serving _restaurant_type_ on _timeRange_
+what are the _object_type_ for _movie_type_ _spatial_relation_
+what are some _movie_type_ playing _spatial_relation_
+get me _object_name_
+can i get the showtimes for _movie_type_ _spatial_relation_
+tell me if it ll _condition_description_ in _state_
+what is the temperate in _city_
+play the _object_type_ _object_name_
+can you play the _sort_ _artist_ _music_item_ from _year_
+is it going to be _condition_temperature_ at _timeRange_ _spatial_relation_ from _current_location_
+can you find me the _object_name_ _object_type_
+is it supposed to be _condition_description_ _current_location_
+play music from the _year_ for me
+play _album_ by _artist_
+find the _object_type_ _object_name_
+what s the forecast in _geographic_poi_
+show _object_name_ _object_type_
+give _rating_value_ _rating_unit_ to _object_name_
+what will the weather be for _city_
+what are the weather conditions in _city_
+rate _object_select_ _object_type_ _rating_value_ _rating_unit_
+book reservations at a _restaurant_type_ in _country_ for _party_size_description_
+book a spot for _party_size_number_ at a _restaurant_type_ that sells _served_dish_ in _city_ _state_ _timeRange_
+find a _object_type_ called _object_name_
+play me a _year_ _music_item_
+is it going to be nicer _timeRange_ in _city_ _country_
+will it be _condition_temperature_ at _timeRange_ at the _geographic_poi_
+book a table at a _restaurant_type_ in _city_ that serves _served_dish_
+play _track_
+what is the weather for my _current_location_
+i d like to add this _music_item_ to _playlist_owner_ _playlist_ playlist
+is the forecast _condition_temperature_ _timeRange_ in _country_
+what _object_type_ start _timeRange_ at _location_name_
+play _object_name_ _object_type_
+find the _object_type_ for _object_name_
+what will the weather be in _city_ _country_ at _timeRange_
+rate _object_select_ _object_type_ _rating_value_ out of _best_rating_
+please book me a table for _party_size_number_ at an _cuisine_ _restaurant_type_
+add this _music_item_ to _playlist_
+find _object_type_ for _spatial_relation_ _movie_type_
+i want a table for _party_size_number_ _timeRange_ om _country_
+is it supposed to be _condition_temperature_ in _state_ _timeRange_
+_object_select_ horrible _object_type_ deserves a _rating_value_ rating
+i want to book a _served_dish_ _restaurant_type_ in _city_
+book a _restaurant_type_ with a _facility_ in _city_
+rate _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+book a reservation for _party_size_number_ on _timeRange_
+what time is _movie_name_ showing
+is it _condition_temperature_ _spatial_relation_ in _country_
+what s the forecase for _city_ on _timeRange_
+rate _object_select_ _object_type_ _rating_value_ of _best_rating_ _rating_unit_
+can you find me reservations for this _timeRange_ at a _restaurant_type_ that serves _served_dish_
+play solange _year_ _music_item_
+what s the forecast for _city_
+play me some _music_item_ from the _sort_ half of the _year_
+give me the _object_type_ at _location_name_
+add _music_item_ _artist_ to _playlist_owner_ _playlist_ playlist
+give _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+rate the _object_name_ _rating_value_ of _best_rating_
+will it be _condition_description_ at _timeRange_ in _state_
+give _rating_value_ out of _best_rating_ _rating_unit_ to _object_name_ _object_part_of_series_type_
+rate the _object_name_ _object_part_of_series_type_ _rating_value_ of _best_rating_
+i want to add _artist_ to _playlist_owner_ _playlist_ list
+book a table for _party_size_number_ people at a _restaurant_type_ which has _facility_
+book sot for _party_size_number_ at _restaurant_type_ with _facility_
+rate _object_name_ _rating_value_ out of _best_rating_
+show me the _object_type_ _object_name_
+find _object_name_ a _object_type_
+add _music_item_ to _playlist_owner_ _playlist_
+can you play something off my _playlist_ playlist on _service_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+add _music_item_ to _playlist_
+give the _object_select_ _object_part_of_series_type_ a _rating_value_
+book a _restaurant_type_ that serves _served_dish_ in _city_ _state_
+i want to add _artist_ to the _playlist_ playlist
+show me the schedule of _movie_name_ at _spatial_relation_ _object_location_type_ at _timeRange_
+the _object_select_ _object_type_ is a _rating_value_
+what s the weather forecast _timeRange_ in _city_ _country_
+find a _object_type_ called _object_name_
+what _movie_type_ are playing at the _spatial_relation_ _object_location_type_
+rate this _object_type_ titled _object_name_ _rating_value_ _rating_unit_
+what is the weather for _city_ _country_
+play some _music_item_ based music from the _year_
+what s the weather _spatial_relation_ to _country_ at _timeRange_
+_object_name_ deserves a perfect _rating_value_ _rating_unit_
+when is _movie_name_ being played at _location_name_
+will it be _condition_temperature_ in _city_ _state_ on _timeRange_
+can you give me weather details for my _current_location_
+what will the weather be like _current_location_ on _timeRange_
+find the _object_type_ for _movie_name_ at the _spatial_relation_ _object_location_type_ _timeRange_
+what are the _object_type_ for _movie_type_ playing _spatial_relation_
+book a table for _party_size_number_ at a restarunt in _city_
+show me _object_name_
+play _playlist_ on _service_
+show _object_type_
+book a reservation for _party_size_number_ for a _cuisine_ _restaurant_type_
+where can i watch the _object_type_ _object_name_
+rate the _object_select_ _object_type_ _rating_value_ out of _best_rating_
+please search the _object_name_ _object_type_
+i want to hear _album_ from _artist_
+what will the weather be like in _city_
+when is _movie_name_ scheduled at the _spatial_relation_ _object_location_type_
+give _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+put _entity_name_ into _playlist_ for me
+rate _object_select_ _object_type_ _rating_value_ _rating_unit_
+show me the _object_type_ _object_name_
+play something from my _playlist_ playlist
+where can i see the _object_type_ of _object_name_
+will it be _condition_description_ in _city_
+show creative _object_type_ _object_name_
+_object_name_ only gets _rating_value_ _rating_unit_ out of _best_rating_
+find _movie_type_ _spatial_relation_ with _object_type_
+i give this _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+can i get the _object_type_ for _timeRange_
+find _movie_type_ at the _spatial_relation_ _object_location_type_
+find the _spatial_relation_ _object_location_type_ for _movie_name_
+i d like to play the _object_type_ _object_name_
+when is _movie_name_ playing at _object_location_type_
+play _year_ on _service_
+where and when is _movie_name_ playing
+locate me the _object_type_ entitled _object_name_
+find a _object_type_ called _object_name_
+is it going to _condition_description_ in _state_ by _timeRange_
+is it going to be _condition_temperature_ in _city_
+tell me if it ll be _condition_temperature_ _timeRange_ in _country_
+where can i see the _object_type_ _object_name_
+book reservations at a _restaurant_type_ in _city_ with _party_size_description_
+add _music_item_ _artist_ to _playlist_
+find _object_type_ for _spatial_relation_ _movie_type_
+where can i find the _object_type_ _object_name_
+play some _year_ music by _artist_ on _service_
+tell me the weather forecast _timeRange_ in _state_
+give me the forecast for the weather in _city_
+rate the _object_name_ _object_part_of_series_type_ _rating_value_ _rating_unit_
+show me the _object_type_ _object_name_
+add name _entity_name_ to the _playlist_ playlist
+show me the _object_type_ _object_name_
+i m wondering when i can see _movie_name_
+book a spot for _party_size_description_ at a _restaurant_type_ on _timeRange_
+play something by _genre_
+what s the weather forecast _spatial_relation_ from _current_location_
+book a _cuisine_ cuisine _restaurant_type_ in _timeRange_ for _party_size_number_ in _city_ _state_
+i want to add another _music_item_ to the _playlist_ playlist
+can you give me the _object_type_
+is there _condition_description_ in _state_
+book an _facility_ _restaurant_type_
+play _artist_ _sort_ charting _music_item_
+can you play _track_ on _service_
+book me a restaurant in _city_ _timeRange_
+play me a _music_item_ by _artist_ on _service_
+find a _object_type_ called _object_name_
+play _track_ _music_item_ by _artist_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+find _movie_type_ with _object_type_ _spatial_relation_
+play _year_ trunes
+i would give _object_name_ _rating_value_ _rating_unit_
+i would like to rate _object_name_ _rating_value_ _rating_unit_
+find _object_name_
+for _playlist_owner_ playlist _playlist_ add the name _entity_name_
+rate _object_select_ _object_type_ _rating_value_ out _best_rating_
+will it get _condition_temperature_ in _country_
+i rate _object_name_ _rating_value_
+show me the _object_name_ _object_type_
+book a table at _restaurant_name_ for _party_size_number_
+find a _object_type_ called _object_name_
+what are _object_type_ for _movie_type_ _spatial_relation_
+where is the _spatial_relation_ _object_location_type_ playing _movie_name_
+will there be a _condition_description_ in _geographic_poi_
+play the _music_item_ that _artist_ contributed to
+book a spot for _party_size_number_ at a _restaurant_type_ on _timeRange_
+play _sort_ _artist_ on _service_
+forecast for _geographic_poi_
+play some _genre_
+add _entity_name_ to _playlist_owner_ _playlist_
+play _genre_
+add this _music_item_ to _playlist_
+is _movie_name_ _timeRange_ _object_location_type_ sold out
+is it _condition_description_ _spatial_relation_ of _geographic_poi_
+book a _restaurant_type_ for _party_size_number_ that s _spatial_relation_ from _state_
+what will the weather be like in _city_ _state_ around _timeRange_
+add _artist_ to _playlist_owner_ playlist called _playlist_
+i d like to know how the weather will be at _timeRange_ in _state_
+book a _restaurant_type_ that serves _served_dish_ in _state_
+what is the weather forecast for _country_
+what is the forecast for _timeRange_ in _city_ _state_
+find the _object_type_ for _movie_type_ at _location_name_
+i give _object_select_ _object_type_ a _rating_value_
+i d like to hear songs from _service_
+i want to hear _album_ from _artist_ off of _service_
+i need a table at a _cuisine_ _restaurant_type_ at _party_size_number_
+for the _playlist_ add the entity _entity_name_
+find _movie_type_ _spatial_relation_
+find me the _object_type_ for _location_name_
+play the _sort_ _music_item_ by _artist_
+will it be _condition_temperature_ _timeRange_ in _city_ _state_
+put this _artist_ _music_item_ on _playlist_owner_ _playlist_ playlist
+add this _artist_ _music_item_ to _playlist_owner_ _playlist_ playlist
+find time for the _object_type_
+for playlist _playlist_ add _entity_name_
+add to _playlist_ playlist with this _music_item_
+play the _sort_ _music_item_ by _artist_
+find the _object_type_ _object_name_
+i want to hear something by _artist_ on _service_
+will it get _condition_description_ in _city_
+tell me the weather forecast for _city_ _state_
+give _rating_value_ rating for _object_select_ _object_type_
+find a _object_type_ called _object_name_
+please find me a _object_type_ called _object_name_
+assign _rating_value_ _rating_unit_ to _object_name_
+add an _music_item_ to _playlist_owner_ list _playlist_
+i would like to rate _object_select_ _object_type_ _rating_value_ _rating_unit_ and a best rating of _best_rating_
+what is the weather forecast for _city_
+_party_size_description_ want to go to the _sort_ _restaurant_type_ in _city_ _state_ this _timeRange_
+add _entity_name_ to _playlist_
+play some _artist_ songs from _album_
+what is the _state_ for the _timeRange_
+give me the _object_type_ for _location_name_
+will it be _condition_description_ in _city_
+i would give _object_name_ a rating of _rating_value_
+how _condition_temperature_ is it _spatial_relation_ the _current_location_ _timeRange_
+what will the weather be like at _timeRange_ in _country_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+play the _track_ by _artist_
+i d like a table at a _sort_ _restaurant_type_ with _cuisine_ cuisine _timeRange_ in _country_
+i d like a _object_type_ for a _spatial_relation_ _movie_type_
+rate _object_name_ _rating_value_ of _best_rating_
+find a _object_type_ of _object_name_
+is _movie_name_ playing at _location_name_
+i am giving this _object_select_ _object_type_ _rating_value_ _rating_unit_
+is it going to be _condition_temperature_ in _geographic_poi_
+will it be _condition_description_ in _country_ on _timeRange_
+i d like to see the _object_type_ _object_name_
+what weather is in _country_ on _timeRange_
+book a table at _restaurant_name_ for a party of _party_size_number_ in _state_
+i want to add something by the _music_item_ _artist_ to _playlist_owner_ _playlist_ playlist
+add _entity_name_ to _playlist_owner_ playlist called _playlist_
+what s the weather forecast for my _current_location_
+look for the _object_name_ _object_type_
+book reservation at a _restaurant_type_ in _city_ _state_ for _party_size_number_ at _timeRange_
+add a _artist_ _music_item_ to _playlist_owner_ _playlist_ playlist
+find _object_name_
+rate _object_select_ _object_type_ a _rating_value_
+add _entity_name_ in playlist _playlist_
+tell me the weather forecast for _timeRange_ in _city_ _state_
+i would give _object_name_ _rating_value_ _rating_unit_ and a best rating of _best_rating_
+i d like to play the _sort_ _artist_ on _service_
+does _location_name_ have _movie_type_ starting _timeRange_
+rate _object_name_ _rating_value_ out of _best_rating_
+i would like to hear a _music_item_ by _artist_
+what will the weather be in the _current_location_ on _timeRange_
+what s the weather for _timeRange_ in _state_
+i d rate the _object_select_ _object_type_ as a _rating_value_
+add _entity_name_ to the _playlist_ playlist
+book at _restaurant_name_ in _city_ for _timeRange_
+play some _year_ _music_item_ from _artist_
+show _object_name_
+will you show me a _object_type_ for _movie_type_ _spatial_relation_
+table for _party_size_number_ on _timeRange_
+i m looking for a _object_type_ called _object_name_
+add this _music_item_ to _playlist_owner_ _playlist_ list
+add another _music_item_ to the _playlist_ playlist
+can you play me a _music_item_ from the _year_
+rate the _object_select_ _object_type_ _rating_value_ of _best_rating_ _rating_unit_
+what are the _object_type_ at _location_name_
+can you add something by _artist_ to _playlist_owner_ _playlist_ playlist
+what _movie_type_ to see at _location_name_
+will it be _condition_temperature_ in _city_ _state_
+add this _music_item_ to _playlist_
+find _object_type_ for _location_name_
+add _artist_ to _playlist_
+i need the weather in _city_ will it be _condition_temperature_
+i would give this _object_select_ _object_type_ _rating_value_ _rating_unit_ or a rating of _best_rating_
+play a _music_item_ by _artist_ from their _album_ _music_item_ on _service_
+rate _object_select_ _object_type_ _rating_value_ of _best_rating_
+find a table for _party_size_number_ at a _restaurant_type_ in _state_ that s _spatial_relation_ from here
+rate the _object_select_ _object_type_ _rating_value_ out of _best_rating_
+show me the _object_type_ _object_name_
+tell me if there is _condition_description_ in the forecast for _geographic_poi_
+tell me the weather forecast for _city_
+add to _playlist_owner_ playlist _playlist_ the name _entity_name_
+give _object_name_ _rating_value_ _rating_unit_
+give _rating_value_ _rating_unit_ to _object_select_ _object_type_
+can you help me find _object_name_
+book a table for _party_size_number_ scheduled for _timeRange_ in _state_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+book a table in _city_ for _party_size_description_ at a _restaurant_type_
+please add this _music_item_ to the playlist titled _playlist_
+tell me the weather forecast for _timeRange_ in _state_
+weather for _city_
+start playing my _playlist_ playlist
+rate _object_select_ _object_type_ _rating_value_ _rating_unit_
+the _object_select_ _object_type_ is _rating_value_ out of _best_rating_ _rating_unit_
+i think the _object_part_of_series_type_ entitled _object_name_ should be given a _rating_value_ rating
+is it better in _timeRange_ or _current_location_
+put _artist_ onto _playlist_
+i need _object_name_ of the _object_type_ get it for me please
+rate _object_name_ _rating_value_ of _best_rating_
+rate _object_select_ _object_type_ _rating_value_ out of _best_rating_
+when can i see _movie_name_
+i am giving this _object_select_ _object_type_ under the _object_part_of_series_type_ section _rating_value_ _rating_unit_
+what is the weather doing in _state_ right _timeRange_
+something on _service_ please
+book a _restaurant_type_ in _state_ for _party_size_description_
+book a table _spatial_relation_ _city_ for _timeRange_
+play _artist_ music from the _year_
+will it be _condition_temperature_ in _geographic_poi_
+is _movie_name_ being played at _location_name_
+what is the weather forecast for _city_ _country_
+is _movie_name_ at _location_name_
+give _object_name_ _object_part_of_series_type_ _rating_value_ out of _best_rating_ for a rating
+is it _condition_temperature_ in _city_ _country_
+find _object_type_ for _spatial_relation_ _movie_type_
+add a _music_item_ to _playlist_owner_ _playlist_ playlist
+play a _music_item_ by _artist_
+tell me the weather forecast for my _current_location_
+find _object_name_ a _object_type_
+i want a table for _party_size_number_ in _state_
+what _movie_type_ are showing _spatial_relation_
+book a table in _city_ at a _sort_ _restaurant_type_
+give _object_select_ _object_type_ _rating_value_ _rating_unit_
+i would like to book a _cuisine_ _restaurant_type_ in _state_
+will it be _condition_temperature_ in _city_
+i give _rating_value_ _rating_unit_ to the _object_type_ _object_name_
+play music from _artist_
+book a spot for _party_size_number_ _spatial_relation_ to _poi_
+add this _music_item_ by _artist_ to _playlist_
+_spatial_relation_ _object_location_type_ with _movie_name_
+play a _music_item_ by _artist_
+find me _movie_type_ at _location_name_ tomorrow
+add _artist_ to _playlist_
+play an _year_ _music_item_ by _artist_
+book a _restaurant_type_ for _party_size_number_
+where can i find the _object_type_ _object_name_
+rate my _object_select_ _object_type_ a _rating_value_
+show _object_name_ _object_type_
+find a _object_type_ for _object_name_
+add _entity_name_ to the _playlist_ playlist
+find _movie_type_ in _location_name_
+add _artist_ to _playlist_owner_ _playlist_ playlist
+can i get the weather forecast for _country_ _timeRange_
+play a _music_item_ from _artist_ using _service_
+add this _music_item_ to _playlist_owner_ _playlist_ playlist
+add _entity_name_ onto _playlist_owner_ _playlist_ playlist please
+find me a _object_type_ called _object_name_
+i m looking for the _object_type_ called _object_name_
+show the _object_type_ and _movie_type_ _spatial_relation_
+add another _music_item_ to the _playlist_ playlist
+can you play the _sort_ _music_item_ from _year_ by _artist_
+i want to book _restaurant_name_ for _party_size_description_ in _state_
+is it going to be _condition_temperature_ in _city_
+will there be _condition_description_ action in _city_ _state_
+i need a table right _timeRange_ for _party_size_number_ in _state_
+rate my _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+can i get some _cuisine_ cuisine at a _restaurant_type_ with _party_size_description_
+is it nice _timeRange_ in _city_
+what time is _movie_name_ playing at _location_name_
+play _sort_ from _artist_ on _service_
+can i get the _object_type_ for _location_name_
+play a _music_item_ from the _year_ on _service_
+add some _artist_ to _playlist_owner_ _playlist_ list
+rate _object_name_ a _rating_value_
+tell me if it ll be _condition_temperature_ _timeRange_ in _country_
+find the _object_type_ for _spatial_relation_ _movie_type_
+i m looking for the _object_type_ _object_name_
+want to eat at _restaurant_name_ that s _spatial_relation_ of _poi_
+add this _artist_ _music_item_ to _playlist_owner_ _playlist_ playlist
+i want to listen to _album_
+book a reservation for _restaurant_name_ in _city_
+play a _music_item_ from _sort_ _year_ by _artist_
+is it _condition_temperature_ _timeRange_ in _city_ _state_
+play _object_name_
+play me a _artist_ _music_item_ from the _year_ with _service_
+book a spot at a _restaurant_type_ with _facility_ that is _spatial_relation_ _country_
+find the _object_type_ for _movie_name_ at the _spatial_relation_ _object_location_type_
+look for _object_name_
+i want to hear the _object_type_ to _object_name_
+add a _music_item_ by _artist_ to _playlist_owner_ _playlist_ playlist
+tell me the weather for _city_
+what is the _condition_description_ forecast for _timeRange_ in _geographic_poi_
+add to _playlist_owner_ _playlist_ list a _music_item_ by _artist_
+i m looking for _object_name_
+add some _artist_ to the _playlist_ playlist
+book a spot for _party_size_number_ at a _restaurant_type_ that has _served_dish_ in _state_ _timeRange_ in _city_
+add _artist_ to _playlist_owner_ _playlist_ list
+what s the weather forecast for _country_
+find the _object_type_
+find _movie_name_ at a _object_location_type_
+i d like to see the _object_type_ _object_name_
+i only give _object_name_ _rating_value_ _rating_unit_
+i want to eat at a _restaurant_type_ with _party_size_description_ in _country_
+will there be a _condition_description_ in _city_ today
+i would like to book a _served_dish_ _restaurant_type_ for _timeRange_
+use _service_ to play _artist_
+what time is _movie_name_ showing
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+i want to rate _object_name_ _object_part_of_series_type_ _object_type_ with _rating_value_ out of _best_rating_
+play music from _year_ on _service_
+add this _music_item_ to _playlist_ list
+add _entity_name_ to _playlist_

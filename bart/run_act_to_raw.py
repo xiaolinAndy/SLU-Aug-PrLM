@@ -1,0 +1,941 @@
+# coding=utf-8
+# Copyright 2018 The Google AI Language Team Authors and The HuggingFace Inc. team.
+# Copyright (c) 2018, NVIDIA CORPORATION.  All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+"""
+Fine-tuning BART for language modeling on SLU data.
+"""
+
+
+import argparse
+import glob
+import logging
+import os
+import pickle
+import random
+import re
+import shutil
+from typing import Dict, List, Tuple
+
+import numpy as np
+import torch
+from torch.nn.utils.rnn import pad_sequence
+from torch.utils.data import DataLoader, Dataset, RandomSampler, SequentialSampler
+from torch.utils.data.distributed import DistributedSampler
+from tqdm import tqdm, trange
+
+from transformers import (
+    WEIGHTS_NAME,
+    AdamW,
+    get_linear_schedule_with_warmup,
+    PreTrainedTokenizer,
+    PreTrainedModel,
+    BartTokenizer,
+    BartForMaskedLM,
+    BartConfig,
+    GPT2Config,
+    GPT2Tokenizer,
+    GPT2LMHeadModel
+)
+from BartExt import BartForSlotFiling, BartForSlotFilingCRF, BartForGeneration, BartForGenerationTest
+
+
+try:
+    from torch.utils.tensorboard import SummaryWriter
+except ImportError:
+    from tensorboardX import SummaryWriter
+
+
+logger = logging.getLogger(__name__)
+
+
+MODEL_CLASSES = {
+    "bart": (BartConfig, BartForGenerationTest, BartTokenizer),
+    "gpt2": (GPT2Config, GPT2LMHeadModel, GPT2Tokenizer)
+}
+SLOT_PADDING_IDX = -100
+
+def convert_label_to_id(labels, slot_dict):
+    token_type_ids = []
+    slot_dict['<pad>'] = -100
+    for sample in labels:
+        type_id = [slot_dict[s] for s in sample]
+        token_type_ids.append(type_id)
+    return token_type_ids
+
+def convert_id_to_label(labels, slot_dict):
+    new_dict = {v:k for k,v in slot_dict.items()}
+    new_dict[-100] = '<pad>'
+    token_type_ids = []
+    for sample in labels:
+        type_id = new_dict[sample.item()]
+        token_type_ids.append(type_id)
+    return token_type_ids
+
+def split_intent_snips(intent):
+    intent = list(intent)
+    for i, c in enumerate(intent):
+        if c.isupper():
+            intent[i] = ' ' + c.lower()
+    intent = ''.join(intent).strip()
+    return intent
+
+def split_intent_atis(intent):
+    intent = re.split(r'_|#', intent)
+    new_intent = []
+    for w in intent:
+        if w != 'atis':
+            new_intent.append(w)
+    intent = ' '.join(new_intent)
+    return intent
+
+class LineByLineTextDataset(Dataset):
+    def __init__(self, tokenizer: PreTrainedTokenizer, args, file_path: str, label_path: str, intent_path: str, block_size=512):
+        assert os.path.isfile(file_path)
+        # Here, we do not cache the features, operating under the assumption
+        # that we will soon use fast multithreaded tokenizers from the
+        # `tokenizers` repo everywhere =)
+        logger.info("Creating features from dataset file at %s", file_path)
+
+        with open(file_path, encoding="utf-8") as f:
+            examples = [line.strip() for line in f.read().splitlines() if (len(line) > 0 and not line.isspace())]
+        with open(label_path, encoding="utf-8") as f:
+            labels = [line.strip() for line in f.readlines()]
+        with open(intent_path, encoding="utf-8") as f:
+            intents = [line.strip() for line in f.readlines()]
+        new_acts = self.get_act_data(labels, examples, intents)
+        self.examples = tokenizer.batch_encode_plus(examples, add_special_tokens=True, max_length=block_size)["input_ids"]
+        self.acts = tokenizer.batch_encode_plus(new_acts, max_length=block_size)["input_ids"]
+
+    def get_act_data(self, labels, examples, intents):
+        new_acts = []
+        for label, example, intent in zip(labels, examples, intents):
+            label = label.split()
+            example = example.split()
+            # atis or snips
+            #intent_str = split_intent_atis(intent)
+            intent_str = split_intent_snips(intent)
+            assert len(label) == len(example)
+            act = []
+            tmp_str, tmp_label = '', ''
+            for i, w in enumerate(example):
+                if tmp_str and tmp_label and label[i][0] != 'I':
+                    act.append([tmp_label, tmp_str])
+                    tmp_str = ''
+                    tmp_label = ''
+                if label[i][0] == 'B':
+                    tmp_label = label[i][2:]
+                    tmp_str = w
+                elif label[i][0] == 'I':
+                    tmp_str += ' ' + w
+                else:
+                    continue
+            if tmp_str and tmp_label:
+                act.append([tmp_label, tmp_str])
+            act_str = ' ' + intent_str + ' ( '
+            for i, (slot, value) in enumerate(act):
+                slot = re.sub('_', ' ', slot)
+                slot = re.sub('\.', ' ', slot)
+                act_str += slot + ' = ' + value
+                if i < len(act) - 1:
+                    act_str += ' ; '
+            act_str += ')'
+            new_acts.append(act_str)
+        return new_acts
+
+
+    def __len__(self):
+        return len(self.examples)
+
+    def __getitem__(self, i):
+        return torch.tensor(self.acts[i], dtype=torch.long),\
+               torch.tensor(self.examples[i], dtype=torch.long)
+
+
+
+def load_and_cache_examples(args, tokenizer, evaluate=False):
+    file_path = args.eval_data_file if evaluate else args.train_data_file
+    intent_path = args.eval_intent_file if evaluate else args.train_intent_file
+    label_path = args.eval_label_file if evaluate else args.train_label_file
+    return LineByLineTextDataset(tokenizer, args, file_path=file_path, label_path=label_path,
+                                     intent_path=intent_path, block_size=args.block_size)
+
+
+def set_seed(args):
+    random.seed(args.seed)
+    np.random.seed(args.seed)
+    torch.manual_seed(args.seed)
+    if args.n_gpu > 0:
+        torch.cuda.manual_seed_all(args.seed)
+
+
+def _sorted_checkpoints(args, checkpoint_prefix="checkpoint", use_mtime=False) -> List[str]:
+    ordering_and_checkpoint_path = []
+
+    glob_checkpoints = glob.glob(os.path.join(args.output_dir, "{}-*".format(checkpoint_prefix)))
+
+    for path in glob_checkpoints:
+        if use_mtime:
+            ordering_and_checkpoint_path.append((os.path.getmtime(path), path))
+        else:
+            regex_match = re.match(".*{}-([0-9]+)".format(checkpoint_prefix), path)
+            if regex_match and regex_match.groups():
+                ordering_and_checkpoint_path.append((int(regex_match.groups()[0]), path))
+
+    checkpoints_sorted = sorted(ordering_and_checkpoint_path)
+    checkpoints_sorted = [checkpoint[1] for checkpoint in checkpoints_sorted]
+    return checkpoints_sorted
+
+
+def _rotate_checkpoints(args, checkpoint_prefix="checkpoint", use_mtime=False) -> None:
+    if not args.save_total_limit:
+        return
+    if args.save_total_limit <= 0:
+        return
+
+    # Check if we should delete older checkpoint(s)
+    checkpoints_sorted = _sorted_checkpoints(args, checkpoint_prefix, use_mtime)
+    if len(checkpoints_sorted) <= args.save_total_limit:
+        return
+
+    number_of_checkpoints_to_delete = max(0, len(checkpoints_sorted) - args.save_total_limit)
+    checkpoints_to_be_deleted = checkpoints_sorted[:number_of_checkpoints_to_delete]
+    for checkpoint in checkpoints_to_be_deleted:
+        logger.info("Deleting older checkpoint [{}] due to args.save_total_limit".format(checkpoint))
+        shutil.rmtree(checkpoint)
+
+
+def mask_tokens(inputs, tokenizer, args, slot_ids, cont_ids):
+
+    labels = inputs.clone()
+    slot_labels = slot_ids.clone()
+    bs = inputs.shape[0]
+    seq_len = inputs.shape[1]
+    probability_matrix = torch.full(labels.shape, args.mlm_probability)
+    if tokenizer._pad_token is not None:
+        padding_mask = labels.eq(tokenizer.pad_token_id)
+        probability_matrix.masked_fill_(padding_mask, value=0.0)
+
+    masked_indices = torch.bernoulli(probability_matrix).bool()
+    if args.wwm:
+        for i in range(bs):
+            last_mask_flag = False
+            for j in range(seq_len):
+                if cont_ids[i][j].item() == 0:
+                    if masked_indices[i][j]:
+                        last_mask_flag = True
+                    else:
+                        last_mask_flag = False
+                else:
+                    if last_mask_flag:
+                        masked_indices[i][j] = True
+                    else:
+                        masked_indices[i][j] = False
+    labels[~masked_indices] = -100  # We only compute loss on masked tokens
+    indices_replaced = masked_indices
+    inputs[indices_replaced] = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
+
+    return inputs, labels, slot_labels
+
+def mask_tokens_cont(inputs, tokenizer, args, slot_ids, cont_ids):
+    """ mask continued n tokens """
+    labels = inputs.clone()
+    slot_labels = slot_ids.clone()
+    mask_inputs = inputs.clone()
+    bs = inputs.shape[0]
+    no_padding_mask = labels.ne(tokenizer.pad_token_id)
+    seq_lens = torch.sum(no_padding_mask, dim=-1)
+    mask_lens = (seq_lens * args.mlm_probability).int() + 1
+    start_seq = seq_lens
+    start_index = start_seq.clone()
+    for i in range(bs):
+        start_index[i] = torch.randint(start_seq[i].item(), (1,))
+        start_tmp = start_index[i].item()
+        end_tmp = start_tmp+mask_lens[i].item()
+        # avoid mask part of a word
+        if args.wwm:
+            while True:
+                if cont_ids[i][start_tmp].item() == 1:
+                    start_tmp -= 1
+                else:
+                    break
+            while True:
+                if end_tmp >= seq_lens[i].item():
+                    break
+                if cont_ids[i][end_tmp].item() == 1:
+                    end_tmp += 1
+                else:
+                    break
+        labels[i][:start_tmp] = -100
+        labels[i][end_tmp:] = -100
+        labels[i][seq_lens[i].item():] = -100
+        seq_1 = inputs[i][:start_tmp]
+        seq_2 = torch.tensor([tokenizer.convert_tokens_to_ids(tokenizer.mask_token)], dtype=torch.long)
+        seq_3 = inputs[i][end_tmp:]
+        tmp_mask = torch.cat([seq_1, seq_2, seq_3])
+        pad_length = inputs[i].shape[0] - tmp_mask.shape[0]
+        mask_inputs[i] = torch.cat([tmp_mask, torch.ones(pad_length).long()*tokenizer.pad_token_id])
+    return mask_inputs, labels, slot_labels
+
+
+def train(args, train_dataset, model: PreTrainedModel, tokenizer: PreTrainedTokenizer) -> Tuple[int, float]:
+    """ Train the model """
+    if args.local_rank in [-1, 0]:
+        tb_writer = SummaryWriter()
+
+    args.train_batch_size = args.per_gpu_train_batch_size * max(1, args.n_gpu)
+
+    def collate(examples: List[torch.Tensor]):
+        input_ids = [s[0] for s in examples]
+        output_ids = [s[1] for s in examples]
+        input_ids = pad_sequence(input_ids, batch_first=True, padding_value=tokenizer.pad_token_id)
+        output_ids = pad_sequence(output_ids, batch_first=True, padding_value=tokenizer.pad_token_id)
+        data = [input_ids, output_ids]
+        return data
+
+    train_sampler = RandomSampler(train_dataset) if args.local_rank == -1 else DistributedSampler(train_dataset)
+    train_dataloader = DataLoader(
+        train_dataset, sampler=train_sampler, batch_size=args.train_batch_size, collate_fn=collate
+    )
+
+    if args.max_steps > 0:
+        t_total = args.max_steps
+        args.num_train_epochs = args.max_steps // (len(train_dataloader) // args.gradient_accumulation_steps) + 1
+    else:
+        t_total = len(train_dataloader) // args.gradient_accumulation_steps * args.num_train_epochs
+
+    # Prepare optimizer and schedule (linear warmup and decay)
+    no_decay = ["bias", "LayerNorm.weight"]
+    optimizer_grouped_parameters = [
+        {
+            "params": [p for n, p in model.named_parameters() if not any(nd in n for nd in no_decay)],
+            "weight_decay": args.weight_decay,
+        },
+        {"params": [p for n, p in model.named_parameters() if any(nd in n for nd in no_decay)], "weight_decay": 0.0},
+    ]
+    optimizer = AdamW(optimizer_grouped_parameters, lr=args.learning_rate, eps=args.adam_epsilon)
+    scheduler = get_linear_schedule_with_warmup(
+        optimizer, num_warmup_steps=args.warmup_steps, num_training_steps=t_total
+    )
+
+    # Check if saved optimizer or scheduler states exist
+    if (
+        args.model_name_or_path
+        and os.path.isfile(os.path.join(args.model_name_or_path, "optimizer.pt"))
+        and os.path.isfile(os.path.join(args.model_name_or_path, "scheduler.pt"))
+    ):
+        # Load in optimizer and scheduler states
+        optimizer.load_state_dict(torch.load(os.path.join(args.model_name_or_path, "optimizer.pt")))
+        scheduler.load_state_dict(torch.load(os.path.join(args.model_name_or_path, "scheduler.pt")))
+
+    if args.fp16:
+        try:
+            from apex import amp
+        except ImportError:
+            raise ImportError("Please install apex from https://www.github.com/nvidia/apex to use fp16 training.")
+        model, optimizer = amp.initialize(model, optimizer, opt_level=args.fp16_opt_level)
+
+    # multi-gpu training (should be after apex fp16 initialization)
+    if args.n_gpu > 1:
+        model = torch.nn.DataParallel(model)
+
+    # Distributed training (should be after apex fp16 initialization)
+    if args.local_rank != -1:
+        model = torch.nn.parallel.DistributedDataParallel(
+            model, device_ids=[args.local_rank], output_device=args.local_rank, find_unused_parameters=True
+        )
+
+    # Train!
+    logger.info("***** Running training *****")
+    logger.info("  Num examples = %d", len(train_dataset))
+    logger.info("  Num Epochs = %d", args.num_train_epochs)
+    logger.info("  Instantaneous batch size per GPU = %d", args.per_gpu_train_batch_size)
+    logger.info(
+        "  Total train batch size (w. parallel, distributed & accumulation) = %d",
+        args.train_batch_size
+        * args.gradient_accumulation_steps
+        * (torch.distributed.get_world_size() if args.local_rank != -1 else 1),
+    )
+    logger.info("  Gradient Accumulation steps = %d", args.gradient_accumulation_steps)
+    logger.info("  Total optimization steps = %d", t_total)
+
+    global_epoch = 0
+    global_step = 0
+    epochs_trained = 0
+    steps_trained_in_current_epoch = 0
+    # Check if continuing training from a checkpoint
+    if args.model_name_or_path and os.path.exists(args.model_name_or_path):
+        try:
+            # set global_step to gobal_step of last saved checkpoint from model path
+            checkpoint_suffix = args.model_name_or_path.split("-")[-1].split("/")[0]
+            global_step = int(checkpoint_suffix)
+            epochs_trained = global_step // (len(train_dataloader) // args.gradient_accumulation_steps)
+            steps_trained_in_current_epoch = global_step % (len(train_dataloader) // args.gradient_accumulation_steps)
+
+            logger.info("  Continuing training from checkpoint, will skip to saved global_step")
+            logger.info("  Continuing training from epoch %d", epochs_trained)
+            logger.info("  Continuing training from global step %d", global_step)
+            logger.info("  Will skip the first %d steps in the first epoch", steps_trained_in_current_epoch)
+        except ValueError:
+            logger.info("  Starting fine-tuning.")
+
+    lm_loss, logging_lm_loss = 0.0, 0.0
+    sl_loss, logging_sl_loss = 0.0, 0.0
+
+    model_to_resize = model.module if hasattr(model, "module") else model  # Take care of distributed/parallel training
+    model_to_resize.resize_token_embeddings(len(tokenizer))
+
+    model.zero_grad()
+    train_iterator = trange(
+        epochs_trained, int(args.num_train_epochs), desc="Epoch", disable=args.local_rank not in [-1, 0]
+    )
+    set_seed(args)  # Added here for reproducibility
+    for _ in train_iterator:
+        epoch_iterator = tqdm(train_dataloader, desc="Iteration", disable=args.local_rank not in [-1, 0])
+        for step, batch in enumerate(epoch_iterator):
+
+            # Skip past any already trained steps if resuming training
+            if steps_trained_in_current_epoch > 0:
+                steps_trained_in_current_epoch -= 1
+                continue
+
+            inputs, outputs = batch
+            padding_mask = outputs.eq(tokenizer.pad_token_id)
+            attn_enc_mask = inputs.ne(tokenizer.pad_token_id)
+            labels = outputs.clone()
+            labels[padding_mask] = -100
+            # print(tokenizer.convert_ids_to_tokens(inputs[0]), tokenizer.convert_ids_to_tokens(outputs[0]))
+            # exit()
+            inputs = inputs.to(args.device)
+            outputs = outputs.to(args.device)
+            labels = labels.to(args.device)
+            attn_enc_mask = attn_enc_mask.to(args.device)
+            model.train()
+            #preds = model(inputs, decoder_input_ids=outputs[:, :-1], lm_labels=labels[:, 1:], attention_mask=attn_enc_mask)
+            preds = model(inputs, decoder_input_ids=outputs[:, :-1], lm_labels=labels[:, 1:])
+            loss = preds[0]
+            total_loss = loss
+
+            if args.n_gpu > 1:
+                total_loss = total_loss.mean()  # mean() to average on multi-gpu parallel training
+            if args.gradient_accumulation_steps > 1:
+                total_loss = total_loss / args.gradient_accumulation_steps
+
+            if args.fp16:
+                with amp.scale_loss(total_loss, optimizer) as scaled_loss:
+                    scaled_loss.backward()
+            else:
+                total_loss.backward()
+
+            lm_loss += loss.item()
+
+            if (step + 1) % args.gradient_accumulation_steps == 0:
+                if args.fp16:
+                    torch.nn.utils.clip_grad_norm_(amp.master_params(optimizer), args.max_grad_norm)
+                else:
+                    torch.nn.utils.clip_grad_norm_(model.parameters(), args.max_grad_norm)
+
+                optimizer.step()
+                scheduler.step()  # Update learning rate schedule
+                model.zero_grad()
+                global_step += 1
+
+                if args.local_rank in [-1, 0] and args.logging_steps > 0 and global_step % args.logging_steps == 0:
+                    # Log metrics
+                    if (
+                        args.local_rank == -1 and args.evaluate_during_training
+                    ):  # Only evaluate when single GPU otherwise metrics may not average well
+                        results = evaluate(args, model, tokenizer)
+                        for key, value in results.items():
+                            tb_writer.add_scalar("eval_{}".format(key), value, global_step)
+                    tb_writer.add_scalar("lr", scheduler.get_lr()[0], global_step)
+                    tb_writer.add_scalar("lm_loss", (lm_loss - logging_lm_loss) / args.logging_steps, global_step)
+                    tb_writer.add_scalar("slot_loss", (sl_loss - logging_sl_loss) / args.logging_steps, global_step)
+                    logger.info("training lm_loss: %.2f", (lm_loss - logging_lm_loss) / args.logging_steps)
+                    logger.info("training sl_loss: %.2f", (sl_loss - logging_sl_loss) / args.logging_steps)
+                    logger.info("training lr: %f", scheduler.get_lr()[0])
+                    logging_lm_loss = lm_loss
+                    logging_sl_loss = sl_loss
+
+                if args.local_rank in [-1, 0] and args.save_steps > 0 and global_step % args.save_steps == 0:
+                    print(global_step)
+                    checkpoint_prefix = "checkpoint"
+                    # Save model checkpoint
+                    output_dir = os.path.join(args.output_dir, "{}-{}".format(checkpoint_prefix, global_step))
+                    os.makedirs(output_dir, exist_ok=True)
+                    model_to_save = (
+                        model.module if hasattr(model, "module") else model
+                    )  # Take care of distributed/parallel training
+                    model_to_save.save_pretrained(output_dir)
+                    tokenizer.save_pretrained(output_dir)
+
+                    torch.save(args, os.path.join(output_dir, "training_args.bin"))
+                    logger.info("Saving model checkpoint to %s", output_dir)
+
+                    _rotate_checkpoints(args, checkpoint_prefix)
+
+                    # torch.save(optimizer.state_dict(), os.path.join(output_dir, "optimizer.pt"))
+                    # torch.save(scheduler.state_dict(), os.path.join(output_dir, "scheduler.pt"))
+                    # logger.info("Saving optimizer and scheduler states to %s", output_dir)
+
+            if args.max_steps > 0 and global_step > args.max_steps:
+                epoch_iterator.close()
+                break
+        global_epoch += 1
+        if args.save_steps == 0:
+            checkpoint_prefix = "checkpoint"
+            # Save model checkpoint
+            output_dir = os.path.join(args.output_dir, "{}-{}".format(checkpoint_prefix, global_epoch))
+            os.makedirs(output_dir, exist_ok=True)
+            model_to_save = (
+                model.module if hasattr(model, "module") else model
+            )  # Take care of distributed/parallel training
+            model_to_save.save_pretrained(output_dir)
+            tokenizer.save_pretrained(output_dir)
+
+            torch.save(args, os.path.join(output_dir, "training_args.bin"))
+            logger.info("Saving model checkpoint to %s", output_dir)
+
+            _rotate_checkpoints(args, checkpoint_prefix)
+
+            # torch.save(optimizer.state_dict(), os.path.join(output_dir, "optimizer.pt"))
+            # torch.save(scheduler.state_dict(), os.path.join(output_dir, "scheduler.pt"))
+            # logger.info("Saving optimizer and scheduler states to %s", output_dir)
+        if args.max_steps > 0 and global_step > args.max_steps:
+            train_iterator.close()
+            break
+
+    if args.local_rank in [-1, 0]:
+        tb_writer.close()
+
+    return global_step, lm_loss / global_step
+
+
+def evaluate(args, model: PreTrainedModel, tokenizer: PreTrainedTokenizer, prefix="") -> Dict:
+    # Loop to handle MNLI double evaluation (matched, mis-matched)
+    eval_output_dir = args.output_dir
+
+    eval_dataset = load_and_cache_examples(args, tokenizer, evaluate=True)
+
+    if args.local_rank in [-1, 0]:
+        os.makedirs(eval_output_dir, exist_ok=True)
+
+    args.eval_batch_size = args.per_gpu_eval_batch_size * max(1, args.n_gpu)
+    # Note that DistributedSampler samples randomly
+
+    def collate(examples: List[torch.Tensor]):
+        input_ids = [s[0] for s in examples]
+        output_ids = [s[1] for s in examples]
+        input_ids = pad_sequence(input_ids, batch_first=True, padding_value=tokenizer.pad_token_id)
+        output_ids = pad_sequence(output_ids, batch_first=True, padding_value=tokenizer.pad_token_id)
+        data = [input_ids, output_ids]
+        return data
+
+    eval_sampler = SequentialSampler(eval_dataset)
+    eval_dataloader = DataLoader(
+        eval_dataset, sampler=eval_sampler, batch_size=args.eval_batch_size, collate_fn=collate
+    )
+
+    # multi-gpu evaluate
+    if args.n_gpu > 1:
+        model = torch.nn.DataParallel(model)
+
+    # Eval!
+    logger.info("***** Running evaluation {} *****".format(prefix))
+    logger.info("  Num examples = %d", len(eval_dataset))
+    logger.info("  Batch size = %d", args.eval_batch_size)
+    eval_loss, eval_slot_loss = 0.0, 0.0
+    nb_eval_steps = 0
+    model.eval()
+
+    for batch in tqdm(eval_dataloader, desc="Evaluating"):
+        inputs, outputs = batch
+        padding_mask = outputs.eq(tokenizer.pad_token_id)
+        labels = outputs.clone()
+        labels[padding_mask] = -100
+        inputs = inputs.to(args.device)
+        outputs = outputs.to(args.device)
+        labels = labels.to(args.device)
+
+
+        with torch.no_grad():
+            preds = model(inputs, decoder_input_ids=outputs[:, :-1], lm_labels=labels[:, 1:])
+            loss = preds[0]  # model outputs are always tuple in transformers (see doc)
+            lm_loss = loss
+            eval_loss += lm_loss.mean().item()
+        nb_eval_steps += 1
+
+    eval_loss = eval_loss / nb_eval_steps
+    perplexity = torch.exp(torch.tensor(eval_loss))
+
+    result = {"perplexity": perplexity}
+
+    output_eval_file = os.path.join(eval_output_dir, prefix, "eval_results.txt")
+    with open(output_eval_file, "w") as writer:
+        logger.info("***** Eval results {} *****".format(prefix))
+        for key in sorted(result.keys()):
+            logger.info("  %s = %s", key, str(result[key]))
+            writer.write("%s = %s\n" % (key, str(result[key])))
+
+    return result
+
+# added function
+def get_slot_dict(slot_file):
+    slot_dict = {}
+    count = 0
+    with open(slot_file, 'r') as f:
+        for line in f.readlines():
+            line = line.strip()
+            slot_dict[line] = count
+            count += 1
+    return slot_dict
+
+def add_vocab(org_file, new_file, args):
+    with open(org_file, 'r') as f:
+        org_vocab = [word.strip() for word in f.readlines()]
+    new_vocab = org_vocab
+    for i, w in enumerate(args.slot_dict.keys()):
+        new_vocab[i+1] = '_' + w + '_'
+    with open(new_file, 'w') as f:
+        for w in new_vocab:
+            f.write(w + '\n')
+
+def main():
+    parser = argparse.ArgumentParser()
+
+    # Required parameters
+    parser.add_argument(
+        "--train_data_file", default=None, type=str, required=True, help="The input training data file (a text file)."
+    )
+    parser.add_argument(
+        "--output_dir",
+        type=str,
+        required=True,
+        help="The output directory where the model predictions and checkpoints will be written.",
+    )
+    parser.add_argument(
+        "--model_type", type=str, default='bart', help="The model architecture to be trained or fine-tuned.",
+    )
+
+    # Other parameters
+    parser.add_argument(
+        "--eval_data_file",
+        default=None,
+        type=str,
+        help="An optional input evaluation data file to evaluate the perplexity on (a text file).",
+    )
+    parser.add_argument(
+        "--should_continue", action="store_true", help="Whether to continue from latest checkpoint in output_dir"
+    )
+    parser.add_argument(
+        "--model_name_or_path",
+        default='bart-large',
+        type=str,
+        help="The model checkpoint for weights initialization. Leave None if you want to train a model from scratch.",
+    )
+
+    parser.add_argument(
+        "--mlm", action="store_true", help="Train with masked-language modeling loss instead of language modeling."
+    )
+    parser.add_argument(
+        "--mlm_probability", type=float, default=0.2, help="Ratio of tokens to mask for masked language modeling loss"
+    )
+
+    parser.add_argument(
+        "--config_name",
+        default=None,
+        type=str,
+        help="Optional pretrained config name or path if not the same as model_name_or_path. If both are None, initialize a new config.",
+    )
+    parser.add_argument(
+        "--tokenizer_name",
+        default=None,
+        type=str,
+        help="Optional pretrained tokenizer name or path if not the same as model_name_or_path. If both are None, initialize a new tokenizer.",
+    )
+    parser.add_argument(
+        "--cache_dir",
+        default=None,
+        type=str,
+        help="Optional directory to store the pre-trained models downloaded from s3 (instead of the default one)",
+    )
+    parser.add_argument(
+        "--block_size",
+        default=-1,
+        type=int,
+        help="Optional input sequence length after tokenization."
+        "The training dataset will be truncated in block of this size for training."
+        "Default to the model max input length for single sentence inputs (take into account special tokens).",
+    )
+    parser.add_argument("--do_train", action="store_true", help="Whether to run training.")
+    parser.add_argument("--do_eval", action="store_true", help="Whether to run eval on the dev set.")
+    parser.add_argument(
+        "--evaluate_during_training", action="store_true", help="Run evaluation during training at each logging step."
+    )
+
+    parser.add_argument("--per_gpu_train_batch_size", default=4, type=int, help="Batch size per GPU/CPU for training.")
+    parser.add_argument(
+        "--per_gpu_eval_batch_size", default=4, type=int, help="Batch size per GPU/CPU for evaluation."
+    )
+    parser.add_argument(
+        "--gradient_accumulation_steps",
+        type=int,
+        default=1,
+        help="Number of updates steps to accumulate before performing a backward/update pass.",
+    )
+    parser.add_argument("--learning_rate", default=5e-5, type=float, help="The initial learning rate for Adam.")
+    parser.add_argument("--weight_decay", default=0.0, type=float, help="Weight decay if we apply some.")
+    parser.add_argument("--adam_epsilon", default=1e-8, type=float, help="Epsilon for Adam optimizer.")
+    parser.add_argument("--max_grad_norm", default=1.0, type=float, help="Max gradient norm.")
+    parser.add_argument(
+        "--num_train_epochs", default=1.0, type=float, help="Total number of training epochs to perform."
+    )
+    parser.add_argument(
+        "--max_steps",
+        default=-1,
+        type=int,
+        help="If > 0: set total number of training steps to perform. Override num_train_epochs.",
+    )
+    parser.add_argument("--warmup_steps", default=0, type=int, help="Linear warmup over warmup_steps.")
+
+    parser.add_argument("--logging_steps", type=int, default=500, help="Log every X updates steps.")
+    parser.add_argument("--save_steps", type=int, default=500, help="Save checkpoint every X updates steps.")
+    parser.add_argument(
+        "--save_total_limit",
+        type=int,
+        default=None,
+        help="Limit the total amount of checkpoints, delete the older checkpoints in the output_dir, does not delete by default",
+    )
+    parser.add_argument(
+        "--eval_all_checkpoints",
+        action="store_true",
+        help="Evaluate all checkpoints starting with the same prefix as model_name_or_path ending and ending with step number",
+    )
+    parser.add_argument("--no_cuda", action="store_true", help="Avoid using CUDA when available")
+    parser.add_argument(
+        "--overwrite_output_dir", action="store_true", help="Overwrite the content of the output directory"
+    )
+    parser.add_argument(
+        "--overwrite_cache", action="store_true", help="Overwrite the cached training and evaluation sets"
+    )
+    parser.add_argument("--seed", type=int, default=42, help="random seed for initialization")
+
+    parser.add_argument(
+        "--fp16",
+        action="store_true",
+        help="Whether to use 16-bit (mixed) precision (through NVIDIA apex) instead of 32-bit",
+    )
+    parser.add_argument(
+        "--fp16_opt_level",
+        type=str,
+        default="O1",
+        help="For fp16: Apex AMP optimization level selected in ['O0', 'O1', 'O2', and 'O3']."
+        "See details at https://nvidia.github.io/apex/amp.html",
+    )
+    parser.add_argument("--local_rank", type=int, default=-1, help="For distributed training: local_rank")
+
+    # new added
+    parser.add_argument("--cuda_id", type=int, default=0, help="gpu id")
+    parser.add_argument("--lambda_slot", type=float, default=1, help="multitask slot predict weight")
+    parser.add_argument("--crf", action="store_true", help="use crf")
+    parser.add_argument("--wwm", action="store_true", help="mask the whole word")
+    parser.add_argument("--mask_cont", action="store_true", help="mask continued k words")
+    parser.add_argument("--share_dec", action="store_true", help="share same decoder for lm and slot tagging")
+    # slot_type_embedding related:
+    parser.add_argument("--slot_type_list", type=str, default="../data/snips/slot_type_list.txt", help="")
+    parser.add_argument("--train_intent_file", type=str, default="../data/snips/train_intent.txt", help="")
+    parser.add_argument("--eval_intent_file", type=str, default="../data/atis/val_intent.txt", help="")
+    parser.add_argument("--train_label_file", type=str, default="../data/snips/train_label.txt", help="")
+    parser.add_argument("--eval_label_file", type=str, default="../data/atis/val_label.txt", help="")
+    args = parser.parse_args()
+
+    if args.eval_data_file is None and args.do_eval:
+        raise ValueError(
+            "Cannot do evaluation without an evaluation data file. Either supply a file to --eval_data_file "
+            "or remove the --do_eval argument."
+        )
+    if args.should_continue:
+        sorted_checkpoints = _sorted_checkpoints(args)
+        if len(sorted_checkpoints) == 0:
+            raise ValueError("Used --should_continue but no checkpoint was found in --output_dir.")
+        else:
+            args.model_name_or_path = sorted_checkpoints[-1]
+
+    if (
+        os.path.exists(args.output_dir)
+        and os.listdir(args.output_dir)
+        and args.do_train
+        and not args.overwrite_output_dir
+    ):
+        raise ValueError(
+            "Output directory ({}) already exists and is not empty. Use --overwrite_output_dir to overcome.".format(
+                args.output_dir
+            )
+        )
+
+
+    # Setup CUDA, GPU & distributed training
+    if args.local_rank == -1 or args.no_cuda:
+        device = torch.device(args.cuda_id if torch.cuda.is_available() and not args.no_cuda else "cpu")
+        args.n_gpu = 0 if args.no_cuda else 1
+    else:  # Initializes the distributed backend which will take care of sychronizing nodes/GPUs
+        torch.cuda.set_device(args.local_rank)
+        device = torch.device("cuda", args.local_rank)
+        torch.distributed.init_process_group(backend="nccl")
+        args.n_gpu = 1
+    args.device = device
+
+    # Setup logging
+    logging.basicConfig(
+        format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
+        datefmt="%m/%d/%Y %H:%M:%S",
+        level=logging.INFO if args.local_rank in [-1, 0] else logging.WARN,
+    )
+    logger.warning(
+        "Process rank: %s, device: %s, n_gpu: %s, distributed training: %s, 16-bits training: %s",
+        args.local_rank,
+        device,
+        args.n_gpu,
+        bool(args.local_rank != -1),
+        args.fp16,
+    )
+
+    # Set seed
+    set_seed(args)
+
+    # Load pretrained model and tokenizer
+    if args.local_rank not in [-1, 0]:
+        torch.distributed.barrier()  # Barrier to make sure only the first process in distributed training download model & vocab
+
+    config_class, model_class, tokenizer_class = MODEL_CLASSES[args.model_type]
+
+    if args.config_name:
+        config = config_class.from_pretrained(args.config_name, cache_dir=args.cache_dir)
+    elif args.model_name_or_path:
+        config = config_class.from_pretrained(args.model_name_or_path, cache_dir=args.cache_dir)
+    else:
+        config = config_class()
+
+
+    if args.tokenizer_name:
+        tokenizer = tokenizer_class.from_pretrained(args.tokenizer_name, cache_dir=args.cache_dir)
+    elif args.model_name_or_path:
+        tokenizer = tokenizer_class.from_pretrained(args.model_name_or_path, cache_dir=args.cache_dir)
+    else:
+        raise ValueError(
+            "You are instantiating a new {} tokenizer. This is not supported, but you can do it from another script, save it,"
+            "and load it from here, using --tokenizer_name".format(tokenizer_class.__name__)
+        )
+
+    # add vocab
+    args.slot_dict = get_slot_dict(args.slot_type_list)
+    num_class = len(args.slot_dict.keys())
+    config.slot_size = num_class
+    config.output_attentions = True
+
+    if args.block_size <= 0:
+        args.block_size = tokenizer.max_len
+        # Our input block size will be the max possible for the model
+    else:
+        args.block_size = min(args.block_size, tokenizer.max_len)
+
+    if args.model_name_or_path:
+        model = model_class.from_pretrained(
+            args.model_name_or_path,
+            from_tf=bool(".ckpt" in args.model_name_or_path),
+            config=config,
+            cache_dir=args.cache_dir,
+        )
+    else:
+        logger.info("Training new model from scratch")
+        model = model_class(config=config)
+
+    # new class
+    #emd_layer = model.resize_token_embeddings(len(tokenizer))
+    #model.model.encoder.embed_tokens = emd_layer
+    #model.model.decoder.embed_tokens = emd_layer
+    if args.crf:
+        model.crf_layer.set_device(args.device)
+    model.to(args.device)
+
+    if args.local_rank == 0:
+        torch.distributed.barrier()  # End of barrier to make sure only the first process in distributed training download model & vocab
+
+    logger.info("Training/evaluation parameters %s", args)
+
+    # Training
+    if args.do_train:
+        if args.local_rank not in [-1, 0]:
+            torch.distributed.barrier()  # Barrier to make sure only the first process in distributed training process the dataset, and the others will use the cache
+
+        train_dataset = load_and_cache_examples(args, tokenizer, evaluate=False)
+
+        if args.local_rank == 0:
+            torch.distributed.barrier()
+
+        global_step, tr_loss = train(args, train_dataset, model, tokenizer)
+        logger.info(" global_step = %s, average loss = %s", global_step, tr_loss)
+
+    # Saving best-practices: if you use save_pretrained for the model and tokenizer, you can reload them using from_pretrained()
+    if args.do_train and (args.local_rank == -1 or torch.distributed.get_rank() == 0):
+        # Create output directory if needed
+        if args.local_rank in [-1, 0]:
+            os.makedirs(args.output_dir, exist_ok=True)
+
+        logger.info("Saving model checkpoint to %s", args.output_dir)
+        # Save a trained model, configuration and tokenizer using `save_pretrained()`.
+        # They can then be reloaded using `from_pretrained()`
+        model_to_save = (
+            model.module if hasattr(model, "module") else model
+        )  # Take care of distributed/parallel training
+        model_to_save.save_pretrained(args.output_dir)
+        tokenizer.save_pretrained(args.output_dir)
+
+        # Good practice: save your training arguments together with the trained model
+        torch.save(args, os.path.join(args.output_dir, "training_args.bin"))
+
+        # Load a trained model and vocabulary that you have fine-tuned
+        model = model_class.from_pretrained(args.output_dir)
+        tokenizer = tokenizer_class.from_pretrained(args.output_dir)
+        if args.crf:
+            model.crf_layer.set_device(args.device)
+        model.to(args.device)
+
+    # Evaluation
+    results = {}
+    if args.do_eval and args.local_rank in [-1, 0]:
+        checkpoints = [args.output_dir]
+        if args.eval_all_checkpoints:
+            checkpoints = list(
+                os.path.dirname(c) for c in sorted(glob.glob(args.output_dir + "/**/" + WEIGHTS_NAME, recursive=True))
+            )
+            logging.getLogger("transformers.modeling_utils").setLevel(logging.WARN)  # Reduce logging
+        logger.info("Evaluate the following checkpoints: %s", checkpoints)
+        for checkpoint in checkpoints:
+            global_step = checkpoint.split("-")[-1] if len(checkpoints) > 1 else ""
+            prefix = checkpoint.split("/")[-1] if checkpoint.find("checkpoint") != -1 else ""
+
+            model = model_class.from_pretrained(checkpoint)
+            if args.crf:
+                model.crf_layer.set_device(args.device)
+            model.to(args.device)
+            result = evaluate(args, model, tokenizer, prefix=prefix)
+            result = dict((k + "_{}".format(global_step), v) for k, v in result.items())
+            results.update(result)
+
+    return results
+
+
+if __name__ == "__main__":
+    main()

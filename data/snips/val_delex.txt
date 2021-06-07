@@ -1,0 +1,700 @@
+i d like to have this _music_item_ onto _playlist_owner_ _playlist_ playlist
+add the _music_item_ to _playlist_owner_ _playlist_ playlist
+add _playlist_ to _playlist_owner_ _entity_name_ playlist
+add this _music_item_ by _artist_ to _playlist_owner_ _playlist_ playlist
+add this _music_item_ to _playlist_
+i need to add _artist_ to the _playlist_ under _playlist_owner_ name
+add the _music_item_ to the _playlist_ playlist
+to the _playlist_ playlist please add this _artist_ _music_item_
+please add some _artist_ to _playlist_owner_ playlist _playlist_
+i d like for _artist_ s _music_item_ to be an addition to _playlist_owner_ _playlist_ playlist
+add _entity_name_ to _playlist_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+add _artist_ music to the _playlist_ playlist
+put _artist_ onto _playlist_owner_ _playlist_
+add the _music_item_ _playlist_ by the _artist_ to _playlist_owner_ gym playlist
+onto _playlist_owner_ _playlist_ please add the _music_item_
+add _entity_name_ in playlist _playlist_
+add _artist_ to _playlist_owner_ _playlist_ playlist
+add _artist_ to the _playlist_ playlist
+add the _music_item_ _artist_ to the _playlist_ playlist
+add _entity_name_ to _playlist_
+add _artist_ to _playlist_owner_ _playlist_ playlist
+put _artist_ onto the _playlist_ playlist
+can you add _artist_ to _playlist_owner_ _playlist_ playlist
+put _artist_ s _music_item_ onto _playlist_
+add _artist_ to _playlist_ playlist
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+add this _music_item_ to _playlist_owner_ _playlist_ playlist
+i d like for you to add _artist_ to _playlist_owner_ _playlist_ playlist
+add _artist_ _music_item_ to _playlist_owner_ _playlist_ playlist
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+add the _music_item_ to the _playlist_ playlist
+add _artist_ to _playlist_owner_ playlist _playlist_
+add this _music_item_ to the _playlist_ playlist
+add _entity_name_ to the _playlist_ playlist
+add the _music_item_ to the _playlist_ playlist
+add a _music_item_ to _playlist_
+add _music_item_ in _playlist_owner_ playlist called _playlist_
+can you put this _music_item_ from _artist_ onto _playlist_owner_ _playlist_ playlist
+add a _music_item_ to playlist _playlist_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+add a _music_item_ to _playlist_
+add the _artist_ _music_item_ to the _playlist_ playlist
+add the _music_item_ to _playlist_owner_ _playlist_ playlist
+add the _artist_ _music_item_ to the _playlist_ playlist
+add _entity_name_ to _playlist_ playlist
+can i put this _music_item_ onto _playlist_owner_ _playlist_ playlist
+i d like to add _artist_ onto the _playlist_ playlist
+add _artist_ to the _playlist_ soundtrack
+add the _music_item_ _artist_ to _playlist_owner_ _playlist_ playlist
+can you put the _music_item_ _artist_ onto the _playlist_ playlist
+add the _music_item_ to the _playlist_ playlist
+add the _music_item_ _artist_ to _playlist_owner_ _playlist_ playlist
+add the _music_item_ to the _playlist_ playlist
+for _playlist_owner_ _playlist_ can you add _artist_
+add the _artist_ _music_item_ to the _playlist_ playlist
+add _artist_ to the _playlist_ playlist
+can you add _entity_name_ to the playlist called _playlist_
+add this _music_item_ to _playlist_
+put the _music_item_ onto _playlist_
+add _artist_ music to _playlist_ playlist
+add _entity_name_ in _playlist_owner_ playlist _playlist_
+add _artist_ newest _music_item_ to the _playlist_ playlist
+add _artist_ _music_item_ to playlist _playlist_
+add the _music_item_ to _playlist_owner_ _playlist_ playlist
+add this _music_item_ to _playlist_ playlist
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+add a _artist_ _music_item_ to _playlist_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+add the current _music_item_ to _playlist_owner_ _playlist_ playlist
+put _artist_ onto the _playlist_ playlist
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+please add this _music_item_ by _artist_ to the _playlist_ playlist
+can you add the current _music_item_ to _playlist_owner_ _playlist_ playlist
+please add _entity_name_ to _playlist_owner_ playlist _playlist_
+add a _music_item_ to _playlist_
+add the _music_item_ to the _playlist_ playlist
+add this _music_item_ to _playlist_owner_ _playlist_ playlist
+add _artist_ to _playlist_owner_ playlist _playlist_
+add _artist_ to _playlist_
+add the _artist_ _music_item_ to _playlist_owner_ _playlist_ playlist
+add an _music_item_ to _playlist_
+add this _music_item_ to _playlist_owner_ _playlist_ playlist
+i need to add to _playlist_owner_ _playlist_ list the works of _artist_
+add _artist_ to _playlist_owner_ _playlist_ playlist
+add _artist_ to _playlist_owner_ _playlist_ playlist
+add this _music_item_ to _playlist_owner_ _playlist_ playlist
+_entity_name_ needs to be added to _playlist_owner_ _playlist_ playlist
+add _artist_ to _playlist_owner_ _playlist_ playlist
+add the _music_item_ to the _playlist_ playlist
+add this _music_item_ to _playlist_owner_ _playlist_ playlist
+add a _music_item_ to _playlist_owner_ playlist _playlist_
+add _artist_ to _playlist_owner_ _playlist_ playlist
+add _artist_ songs in _playlist_
+add a _music_item_ in _playlist_owner_ _playlist_
+add _entity_name_ to _playlist_owner_ _playlist_ playlist
+add the _music_item_ to _playlist_owner_ _playlist_ playlist
+add _artist_ to _playlist_owner_ _playlist_ playlist
+add the _music_item_ to the _playlist_ playlist
+add the _music_item_ to _playlist_owner_ _playlist_ playlist
+book a reservation for _party_size_description_
+book a reservation for a _restaurant_type_ _spatial_relation_ from _state_
+i would like to book a _restaurant_type_ in _country_ that is _spatial_relation_ for _party_size_description_
+book a reservation for an _restaurant_type_
+book a reservation for _party_size_number_ people for a _cuisine_ _restaurant_type_ in _country_
+i need a table in _city_ at a _cuisine_ _restaurant_type_
+book sot for _party_size_description_ _spatial_relation_ _poi_
+book _party_size_description_ a reservation for a _served_dish_ _restaurant_type_ in _city_ _state_ on _timeRange_
+book spot for _party_size_number_ at _restaurant_name_
+i want to book a _restaurant_type_ for _party_size_number_ people in _country_
+book me a reservation for the _sort_ _restaurant_type_
+book the _sort_ table in _country_ for _party_size_number_ people at a _restaurant_type_
+i want to book a _restaurant_type_ in a _facility_
+book a _restaurant_type_ that serves _cuisine_ food for _party_size_number_ people
+book spot for _party_size_number_ at an _facility_ _restaurant_type_ in _state_ _timeRange_
+book a table in _country_ for _timeRange_
+i want to book a _restaurant_type_ for _party_size_number_ people in _country_
+i need a table for _party_size_number_ at a _sort_ _restaurant_type_ in _city_ _state_
+i want to book _restaurant_name_ in _city_
+i need a table for _party_size_number_ please confirm the reservation
+book a _sort_ _restaurant_type_ for _party_size_number_ people
+i want to book a _restaurant_type_ _spatial_relation_ the _poi_ for a _timeRange_ for _party_size_number_ people
+i want to eat a _restaurant_type_ _timeRange_ that serves _cuisine_ food
+book a reservation for _party_size_number_ people at a _restaurant_type_ in _city_
+book a reservation at _restaurant_type_ for _served_dish_
+book spot for _party_size_number_ in _country_
+i want to book _restaurant_name_ in _city_ _state_ _timeRange_ for a party of _party_size_number_
+i want to book a _restaurant_type_ in _city_ for _timeRange_ for _party_size_number_ people
+i want to book a _sort_ _restaurant_type_ for _party_size_number_ people
+book a reservation for _party_size_number_ people in _city_ _state_
+table for _restaurant_name_ in _state_ _timeRange_
+i want to book a _restaurant_type_ in _country_ for _party_size_number_ people
+book spot for _party_size_number_
+book me a reservation for a _restaurant_type_ in _city_ for a party of _party_size_number_
+book spot for _party_size_description_ at a _restaurant_type_
+i want to book a _cuisine_ _restaurant_type_ in _country_
+book a reservation for _restaurant_name_ _spatial_relation_ to _poi_
+book spot for _party_size_number_ at _restaurant_name_ in _city_
+book a spot for _party_size_description_ at _city_
+i want to book a _restaurant_type_ for _party_size_description_ in _city_ _timeRange_
+book a _restaurant_type_ reservation _timeRange_
+book a reservation for a _restaurant_type_ with a _facility_ _spatial_relation_ _state_
+book spot for _party_size_number_ at _restaurant_name_ in _country_
+i need a table for _party_size_number_ in _country_ at _restaurant_name_
+i want to book a _restaurant_type_ in _city_ _timeRange_ for _party_size_number_ people
+book _party_size_number_ in _spatial_relation_ _city_
+i want to eat by _timeRange_ in _state_ for a _party_size_number_ people
+i want to book _restaurant_name_ in _state_ for _party_size_number_ people
+book a reservation for _party_size_number_ at _restaurant_name_ in _city_
+book a table at a _restaurant_name_
+book spot for _party_size_description_ in _country_ at _timeRange_
+can you book me a table at _restaurant_name_ in _city_ _state_
+book me a table for _party_size_number_ _timeRange_ at _restaurant_name_
+book spot for _party_size_number_ at _timeRange_ at a _restaurant_type_ in _state_ that serves _served_dish_
+i want to book a _restaurant_type_ _spatial_relation_ in _city_ for _party_size_number_ people
+i need a table at _restaurant_name_ in _state_ for _party_size_number_
+book a reservation for an _restaurant_type_ restaurant for _party_size_number_ people on _timeRange_
+i want to book a _sort_ _restaurant_type_ _spatial_relation_ by in _state_ for _party_size_description_ on _timeRange_
+book a reservation for _party_size_number_ at a _restaurant_type_ in _state_
+book a reservation for _party_size_number_ people at the _sort_ _restaurant_type_ restaurant
+book a table on _timeRange_ for _party_size_number_ people in _state_
+book a table _spatial_relation_ _poi_
+i want to book a _restaurant_type_ in _city_
+i want a table at _restaurant_name_ in _city_ _state_
+like to book a seat in _country_ for the _restaurant_name_
+i want to book a table in a _restaurant_type_ in _country_
+i would like to book a _restaurant_type_ for _cuisine_ cuisine in the state of _state_
+book a reservation for _party_size_number_ people at an _restaurant_type_ with a _facility_ _spatial_relation_ of _city_ for _timeRange_
+book a reservation for _party_size_description_ for an _cuisine_ _restaurant_type_ at _timeRange_ in _state_
+book a spot for _party_size_number_ in _state_ at _restaurant_name_
+book a reservation for _party_size_description_ at a _restaurant_type_ in _country_
+book a reservation for _party_size_number_ people for a _cuisine_ _restaurant_type_ in _city_
+_party_size_description_ need a table at a _restaurant_type_ _timeRange_
+book a reservation for _party_size_number_ at a _restaurant_type_ in _state_
+i want to book a _restaurant_type_ that serves _served_dish_ _spatial_relation_ from here at _timeRange_ in _country_ for _party_size_number_ people
+i want to book a _restaurant_type_ for _party_size_number_ people in the _country_
+i want to book a _restaurant_type_ for _party_size_number_ people
+lets eat _spatial_relation_ _city_ _timeRange_ at _restaurant_name_
+book sot for _party_size_number_ at a _restaurant_type_ that serves _cuisine_ in _city_ on _timeRange_
+book a _restaurant_type_ for _party_size_number_ at an _facility_ cafe in _country_
+book a table for _timeRange_ at _poi_ _spatial_relation_ for _party_size_number_
+please book me a table at a _restaurant_type_ with a _facility_ facility in _country_
+book spot for _party_size_number_ at a _facility_ _restaurant_type_ _spatial_relation_ of _state_ _timeRange_
+please book me a _restaurant_type_
+book a reservation for _party_size_description_ at _restaurant_name_ in _city_
+i want to book a _restaurant_type_ in _city_ at _timeRange_ for _party_size_number_ people
+table for _timeRange_ at _restaurant_name_
+please book me a table at a _restaurant_type_ which serves _served_dish_
+i want to book a _restaurant_type_ for _party_size_number_ people in _city_ _state_
+i would like to book a _sort_ _restaurant_type_ for a party of _party_size_number_
+i want to book a _cuisine_ _restaurant_type_ _spatial_relation_ in _state_ for _party_size_number_ people on _timeRange_
+book a party of _party_size_number_ at _city_ for _timeRange_
+book spot for _party_size_number_ at _city_
+i want to book a _restaurant_type_ _timeRange_ for _party_size_number_ people in _city_ _state_
+i want to eat in _city_
+book a party at _poi_ _spatial_relation_ for _restaurant_type_
+book me a reservation for a party of _party_size_number_ at a _restaurant_type_ in _country_
+i want to book a _cuisine_ _restaurant_type_ in _timeRange_ _spatial_relation_ _city_ for _party_size_number_ people
+book a reservation for _party_size_number_ people at the _sort_ _restaurant_type_ _spatial_relation_ _city_ _timeRange_
+need a table somewhere in _city_ _timeRange_
+what will the weather be _spatial_relation_ from _current_location_
+will there be _condition_description_ in _geographic_poi_
+tell me the weather forecast for _city_
+is there a _condition_description_ _timeRange_ in _state_
+what will the weather be in _geographic_poi_ on _timeRange_
+weather _timeRange_ in _country_
+when will it be _condition_temperature_ _current_location_
+what will the weather be _timeRange_ in _country_
+what kind of weather will be in _country_ _timeRange_
+_condition_description_ in _city_ _state_
+what s the weather going to be in _state_
+_condition_description_ _spatial_relation_ from _city_ on _timeRange_
+what is the forecast for _state_ at _city_ during the _condition_description_
+what will the weather be in _state_
+what is the forecast starting _timeRange_ _spatial_relation_ the state of _state_
+will it be _condition_description_ at _timeRange_ in _city_ _country_
+check the forecast for _state_
+will it be _condition_temperature_ in _country_ at _timeRange_
+let me know the weather forecast around _timeRange_ _spatial_relation_ from _current_location_ in _geographic_poi_
+will it be _condition_description_ in the _geographic_poi_
+tell me if it will be _condition_description_ _timeRange_ in _city_ _state_
+what will the weather be _timeRange_ _spatial_relation_ _country_
+will there be _condition_description_ on _timeRange_ in _country_
+will it be _condition_temperature_ _current_location_ _timeRange_
+what s the weather going to be in _city_
+what will the weather be in _city_ on _timeRange_
+what will the weather be in _state_
+i need to know the weather for _timeRange_ in _country_ when i go to _city_
+what is the forecast for _geographic_poi_ _timeRange_ and _spatial_relation_
+what kind of weather is forecast around _timeRange_ _spatial_relation_ _country_
+will it be _condition_temperature_ in _city_
+will it be _condition_temperature_ in _geographic_poi_
+will it be _condition_temperature_ at _timeRange_ in _city_ _country_
+what is the weather going to be like in _state_ on _timeRange_
+weather in _city_ _state_
+when is _timeRange_ for _state_
+what will the weather be _spatial_relation_ from _current_location_ on _timeRange_
+what is the forecast for _city_ in _country_
+tell me the weather forecast _current_location_
+what is the weather forecast _spatial_relation_ _city_
+what will the weather be in _timeRange_ in _city_
+will it be _condition_temperature_ _timeRange_ in _city_ _state_
+what is the weather forecast for _country_
+what s the weather in _city_
+what will the weather be in _state_ on _timeRange_
+will the _condition_description_ be out _timeRange_ in _city_ _country_
+what is the weather _current_location_
+what will the weather be _timeRange_ in _country_
+what kind of weather is forecast in _state_ _timeRange_
+what is the forecast for _state_ for _condition_temperature_
+how _condition_temperature_ will it be _current_location_ _timeRange_
+what is the forecast for _condition_temperature_ weather at _geographic_poi_
+what is the _condition_description_ forecast for the _current_location_ starting on _timeRange_
+what is the forecast for _country_ at _city_ on _timeRange_
+what will the _condition_description_ be in the _current_location_ at _timeRange_
+what is the forecast in _city_ and _spatial_relation_
+what is the weather going to be like in _city_ _state_ _timeRange_
+what s the weather forecast for _geographic_poi_ _spatial_relation_ _timeRange_
+what is the forecast for beginning on _timeRange_ for _city_
+what s the forecast for _timeRange_ in _city_ _country_
+will there be a _condition_description_ _timeRange_ in _city_ _state_
+will it be _condition_temperature_ in the _state_ on _timeRange_
+what will the weather be _current_location_ on _timeRange_
+what is the forecast for _condition_temperature_ temps beginning on _timeRange_ _current_location_
+what s the weather like in _city_ _state_
+what is the forecast for _current_location_ for _condition_description_ conditions at _timeRange_
+will there be a _condition_description_ in _city_ at _timeRange_
+what is the _condition_temperature_ condition of our _current_location_ for _timeRange_
+what will the weather be in _city_ on _timeRange_
+will it be _condition_temperature_ _timeRange_ in _geographic_poi_
+what is the forecast in _city_ in _state_ starting at _timeRange_
+what is the forecast in _state_ for _city_
+what is the forecast for _country_
+need weather for _geographic_poi_ to see if it will be _condition_description_ today
+weather in _city_ _country_ on _timeRange_
+what s the _condition_description_ _current_location_ right _timeRange_
+how s the weather at _geographic_poi_ and _spatial_relation_ right _timeRange_
+what is the forecast for _city_ for _condition_temperature_ weather
+_condition_description_ on _timeRange_ in _geographic_poi_ and _spatial_relation_ places
+i need the weather in _city_
+tell me the forecast for _timeRange_ in _geographic_poi_
+tell me the weather forecast for _state_ on _timeRange_
+what is the forecast for _geographic_poi_
+will it be _condition_temperature_ in _state_ at _timeRange_
+weather _timeRange_ in _country_
+what is the forecast for this _timeRange_ for _condition_description_ conditions in _city_ _country_
+how s the weather _current_location_ at _timeRange_
+will _geographic_poi_ be _condition_temperature_ at _timeRange_
+what is the forecast for starting at _timeRange_ in _city_ for _condition_temperature_ weather
+what s the weather in _city_
+what is the _condition_description_ forecast for _timeRange_ in _country_
+tell me the weather forecast _current_location_
+will there be a _condition_description_ in _state_ _timeRange_
+how much _condition_temperature_ will it be _spatial_relation_ from _state_ around _timeRange_
+will it be _condition_temperature_ _timeRange_ in _city_ _country_
+what will the weather be in _geographic_poi_ on _timeRange_
+will it be _condition_description_ in _city_
+will it be _condition_temperature_ in the _country_ on _timeRange_
+where is _country_ located
+what will the weather be in _city_
+can you put on _album_ by _artist_
+play _album_ by _artist_
+play the _sort_ _music_item_ on _service_ by _artist_
+use _service_ to play music
+please play something _sort_ from _artist_ any _music_item_ from _year_ on _service_ will do
+play a _music_item_ from _year_
+let me hear the _sort_ songs from _artist_
+play my _playlist_ playlist
+i want to play music from _service_
+play _album_ from _artist_
+i want to hear a _year_ _music_item_
+play a _artist_ _music_item_
+please play something from _artist_ that s on the _sort_
+please play something _playlist_ on _service_
+play something from _year_ by _artist_ on _service_
+play _year_ music please
+play music from the artist _artist_ and sort it through _sort_
+play anything _artist_ did in the _year_
+play music off _service_
+_year_ songs on _service_
+open _service_ and play _artist_ _album_
+play an _music_item_ by _artist_
+play an _music_item_ from _artist_
+i want to listen to something on _service_
+start playing something from _service_
+play _playlist_ on _service_
+find and play a _music_item_ on _service_ from _year_ by _artist_
+play _track_
+i want to hear music from _artist_ from the _year_
+turn on _service_
+play a _music_item_ by _artist_
+play _track_ by _artist_
+play some _artist_ from the _year_ on _service_
+i want to listen to an _music_item_ from _year_
+play _artist_
+play _album_ _music_item_
+play _music_item_ s from _year_
+play something from _playlist_
+play _track_ by _artist_ from _service_
+play _music_item_ by _artist_ on _service_
+play some _year_ songs on _service_
+play a _year_ _music_item_ from _artist_ on _service_
+please play my _playlist_ playlist
+open _service_ and play _album_ by _artist_
+let s play _artist_ s _album_ on _service_
+play a _year_ _music_item_
+play _playlist_ on _service_
+_album_ _artist_ please
+play the _sort_ _artist_ on _service_
+play some _year_ _artist_
+play the _sort_ _artist_
+play music from _artist_
+can you play _artist_ on _service_
+play a _artist_ _music_item_
+i want to hear _artist_ on _service_ play the _music_item_ _track_
+play some _music_item_ music from _artist_
+please play something on _service_ from artist _artist_ _sort_ _music_item_
+i want to hear _music_item_ from the artist _artist_
+play _music_item_ music from the _year_
+play _track_ by _artist_
+play music from _year_
+go to _service_ and play _album_ by _artist_
+play _album_ from _artist_ through _service_
+play some _music_item_ from the _year_
+please _music_item_ into _artist_ s _sort_ music
+play the _sort_ music from _artist_
+play something on _service_
+play music by _artist_
+play some _artist_
+play music by _artist_
+can you play _sort_ _service_ by _artist_
+play the _sort_ _artist_ _music_item_
+let s hear stuff from _artist_
+play a _sort_ _music_item_ from the _year_ by _artist_
+play _album_ from _artist_
+play the _sort_ music from _artist_ off _service_
+play the _sort_ _artist_
+play something by _artist_ from the _year_
+use the _service_ service to play _playlist_
+play my _playlist_ playlist
+play an _music_item_ from _artist_
+i want to hear anything from the _genre_ genre please
+please play a _year_ _music_item_
+put _album_ by _artist_ on the stereo
+please play a _music_item_ from _artist_
+play some _sort_ _artist_ on _service_
+please open _service_
+play _genre_
+i want to hear _music_item_ music on _service_ from _artist_
+play a _music_item_ by _artist_ from _year_
+play some _genre_
+proceed with _artist_ music from _year_
+play something on _service_
+play music from _artist_
+let me hear _artist_ music
+let s hear _sort_ _artist_ on _service_
+please play a _music_item_ from the _year_ that s on _service_
+play _album_ by _artist_
+play _track_ on _service_
+play _playlist_
+rate _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+give _object_select_ _object_type_ _rating_value_ _rating_unit_
+rate _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+rate _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+give _rating_value_ _rating_unit_ to _object_name_
+give _object_select_ _object_type_ a score of _rating_value_
+give the _object_select_ _object_part_of_series_type_ _rating_value_ of _best_rating_ _rating_unit_
+give _rating_value_ out of _best_rating_ _rating_unit_ to _object_name_ _object_part_of_series_type_
+give _rating_value_ _rating_unit_ out of _best_rating_ to _object_name_
+rate _object_name_ a _rating_value_
+rate the _object_select_ _object_part_of_series_type_ _rating_value_ _rating_unit_
+rate _object_select_ _object_type_ a _rating_value_ out of _best_rating_
+rate the _object_select_ _object_type_ _rating_value_ of _best_rating_ _rating_unit_
+rate _object_select_ _object_type_ a _rating_value_
+give _rating_value_ out of _best_rating_ to the _object_select_ _object_type_
+give _object_select_ _object_type_ _rating_value_ _rating_unit_
+rate _object_name_ _object_part_of_series_type_ _rating_value_ _rating_unit_
+give the _object_select_ _object_type_ _rating_value_ _rating_unit_
+give the _object_select_ _object_type_ _rating_value_ _rating_unit_
+give _object_name_ _rating_value_ _rating_unit_
+rate _object_name_ _rating_value_ of _best_rating_ _rating_unit_
+rate _object_select_ _object_type_ _rating_value_ out of _best_rating_
+give the _object_name_ _object_part_of_series_type_ _rating_value_ _rating_unit_
+_object_name_ _object_part_of_series_type_ deserves _rating_value_ _rating_unit_ out of _best_rating_ for a rating
+give _object_name_ a _rating_value_ out of _best_rating_ rating
+_object_name_ should get a _rating_value_
+give _rating_value_ _rating_unit_ to _object_select_ _object_type_
+rate the _object_select_ _object_type_ a _rating_value_ out of _best_rating_ _rating_unit_
+rate the _object_type_ _object_name_ _rating_value_ out of _best_rating_
+rate _object_name_ _rating_value_ out of _best_rating_
+rate the _object_part_of_series_type_ _object_select_ _rating_value_ star
+mark _object_select_ _object_type_ a score of _rating_value_
+rate the _object_select_ _object_type_ _rating_value_ out of _best_rating_
+rate the _object_select_ _object_type_ a _rating_value_
+give _object_name_ _rating_value_ _rating_unit_
+rate _object_select_ _object_type_ _rating_value_ out of _best_rating_
+give _object_name_ a _rating_value_ out of _best_rating_ rating
+rate _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+rate the _object_select_ _object_type_ _rating_value_ _rating_unit_
+rate the _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+rate _object_select_ _object_type_ _rating_value_ _rating_unit_
+give _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+rate _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+rate _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+give my _object_select_ _object_type_ _rating_value_ of _best_rating_ _rating_unit_
+rate _object_select_ _object_type_ _rating_value_ _rating_unit_
+give _rating_value_ out of _best_rating_ _rating_unit_ to _object_select_ _object_type_
+give a rating of _rating_value_ to _object_name_
+rate _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+rate _object_name_ _rating_value_ _rating_unit_ out of _best_rating_
+give _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+give _rating_value_ _rating_unit_ to _object_name_
+give the _object_select_ _object_type_ a _rating_value_ of _best_rating_
+rate _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+rate the _object_select_ _object_part_of_series_type_ a _rating_value_
+give _rating_value_ of _best_rating_ _rating_unit_ to _object_name_
+give _rating_value_ out of _best_rating_ _rating_unit_ to _object_select_ _object_type_
+give _object_select_ _object_type_ _rating_value_ _rating_unit_
+rate _object_name_ _rating_value_ out of _best_rating_
+rate _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+rate _object_name_ _rating_value_ _rating_unit_
+give _object_name_ _rating_value_ of _best_rating_ _rating_unit_
+rate _object_select_ _object_type_ a _rating_value_
+give _object_name_ _rating_value_ _rating_unit_
+give the _object_select_ _object_type_ a rating of _rating_value_
+give _rating_value_ _rating_unit_ to _object_name_
+give a _rating_value_ rating to _object_name_
+rate _object_select_ _object_part_of_series_type_ _rating_value_ _rating_unit_
+give _object_name_ a rating of _rating_value_ _rating_unit_
+rate _object_select_ _object_part_of_series_type_ _rating_value_ out of _best_rating_
+rate _object_name_ _rating_value_ _rating_unit_
+rate _object_name_ _rating_value_ out of _best_rating_
+rate _object_name_ a _rating_value_ out of _best_rating_
+give _rating_value_ start to the _object_select_ _object_type_
+give _object_select_ _object_part_of_series_type_ a _rating_value_ rating
+rate _object_select_ _object_type_ a _rating_value_
+out of _best_rating_ give _object_name_ a _rating_value_
+give _rating_value_ of _best_rating_ _rating_unit_ to _object_name_
+rate _object_name_ _object_part_of_series_type_ a _rating_value_
+rate _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+i would rate _object_name_ _rating_value_ out of _best_rating_ _rating_unit_
+rate _object_name_ _rating_value_ _rating_unit_
+give _rating_value_ rating to _object_name_
+give _rating_value_ out of _best_rating_ rating to the _object_select_ _object_type_
+give the _object_select_ _object_part_of_series_type_ _rating_value_ of _best_rating_ _rating_unit_
+rate _object_name_ a _rating_value_
+give _object_select_ _object_type_ _rating_value_ _rating_unit_
+rate _object_name_ _rating_value_ _rating_unit_
+rate _object_name_ a _rating_value_
+give _object_name_ a _rating_value_ out of _best_rating_ _rating_unit_
+give _object_select_ _object_type_ a _rating_value_
+rate the _object_select_ _object_type_ _rating_value_ out of _best_rating_
+give _object_select_ _object_type_ _rating_value_ out of _best_rating_ _rating_unit_
+give _object_name_ _rating_value_ _rating_unit_
+rate _object_select_ _object_part_of_series_type_ _rating_value_ out of _best_rating_
+give _object_name_ a rating of _rating_value_ _rating_unit_
+rate _object_select_ _object_type_ _rating_value_ _rating_unit_ out of _best_rating_
+rate the _object_name_ _rating_value_ out of _best_rating_
+give _rating_value_ _rating_unit_ to _object_name_
+rate the _object_select_ _object_part_of_series_type_ _rating_value_ _rating_unit_
+wish to find the _object_type_ the _object_name_
+please look up the _object_type_ _object_name_
+get me the _object_name_ _object_type_
+please find me the _object_type_ _object_name_
+wish to see the _object_type_ with the name _object_name_
+looking for a _object_type_ called _object_name_
+can you find me the work _object_name_
+please get me _object_name_ _object_type_
+need a creative work called _object_name_
+search for the _object_type_ for _object_name_
+looking for a creative work called _object_name_
+find the _object_type_ _object_name_
+can you please find me the _object_type_ _object_name_
+can you find me _object_name_ _object_type_
+please fine me the _object_type_ _object_name_
+please look up the work _object_name_
+please help me find the _object_name_ _object_type_
+please help me find _object_name_
+please look up the _object_type_ _object_name_
+can you find me _object_name_
+please search for _object_name_
+can you get me the _object_name_ _object_type_
+please look up the _object_type_ _object_name_
+please search for the _object_type_ _object_name_
+please find me _object_name_
+get me the _object_name_ _object_type_
+looking for a _object_type_ called _object_name_
+can you search the _object_name_ _object_type_
+look for the _object_type_ _object_name_
+find me a _object_type_ called _object_name_
+search for _object_name_
+look for the _object_type_ _object_name_
+can you find me _object_name_
+please help me search the _object_name_ _object_type_
+get me the _object_name_ _object_type_
+can you find me the work titled _object_name_
+please search for the _object_type_ titled _object_name_
+could you locate the _object_name_ _object_type_
+get me the _object_type_ of _object_name_
+please search the _object_name_ _object_type_
+can you find me the _object_name_ _object_type_
+could you find the _object_type_ _object_name_
+search for the _object_type_ _object_name_
+please look up _object_name_ _object_type_
+please get me the _object_name_ _object_type_
+can you look up the _object_name_ _object_type_
+search for _object_name_
+find the creative work _object_name_
+need the creative work called _object_name_
+can you find me the _object_name_ _object_type_
+can you please find me the _object_name_ _object_type_
+can you find me the work _object_name_
+please look up and find me _object_name_
+please search for _object_name_
+please search the _object_type_ _object_name_
+find me the _object_type_ with the name _object_name_ …
+looking for a _object_type_ with the title of _object_name_
+can you find the _object_name_ _object_type_
+can you find me the _object_name_ _object_type_
+please find me the _object_name_ _object_type_
+look for the _object_type_ _object_name_
+please find me the _object_name_
+can you get me the _object_name_ _object_type_
+find me the _object_type_ _object_name_
+please get me _object_name_ _object_type_
+find the _object_type_ _object_name_
+am looking for a _object_type_ with the title _object_name_
+look for the _object_type_ _object_name_
+can you search the _object_type_ _object_name_
+looking for a _object_type_ with the title _object_name_
+please find me the _object_name_ _object_type_
+look for the _object_type_ _object_name_
+find the creative work _object_name_
+find _object_name_
+find me the _object_type_ _object_name_
+please search for the _object_type_ _object_name_
+find a creative work called _object_name_
+looking for the _object_type_ with the name of _object_name_
+look for the _object_type_ _object_name_
+find the _object_type_ _object_name_
+please find me the _object_name_ _object_type_
+find the _object_type_ _object_name_
+can you please get me the _object_type_ _object_name_
+please look up the _object_type_ _object_name_
+please find me the _object_type_ titled _object_name_
+find the creative work _object_name_
+please look up the work _object_name_
+i m looking for _object_name_
+please search for the _object_name_ _object_type_
+please look up _object_name_ _object_type_
+please search the _object_name_
+can you find the creative works associated with _object_name_
+please get me the _object_name_ _object_type_
+please search the _object_name_ _object_type_
+please look up the _object_name_ _object_type_
+can you find me _object_name_ _object_type_
+i wish to watch _object_name_ _object_type_ please search
+can you find me the _object_name_ _object_type_
+please find me the work _object_name_
+search for the _object_type_ _object_name_
+is _movie_name_ playing
+is _movie_name_ playing
+is _movie_name_ playing at _timeRange_
+what s the _object_type_
+i want to see _movie_name_
+when is _movie_name_ playing in this _object_location_type_
+show me the _object_type_ for _movie_name_
+is _movie_name_ playing _timeRange_
+i want to see _movie_name_ at the _spatial_relation_ _object_location_type_
+where can i see _movie_name_
+i need to find the _object_location_type_ showing _movie_name_ _spatial_relation_ to me
+i want to see _movie_name_ at the _spatial_relation_ _object_location_type_
+i want to see _movie_name_ when will it be showing
+find the _object_type_ for _movie_name_ at _location_name_
+what are the _object_type_ for my favorite _location_name_
+what are the _movie_type_ showing _spatial_relation_
+is _movie_name_ playing _timeRange_
+i need _movie_type_ _spatial_relation_ for _timeRange_ time
+i want to see _movie_name_ in a _object_location_type_
+can i see _movie_name_ _timeRange_
+i want _movie_type_ at _location_name_
+show me the _object_type_ for _movie_name_
+i want to know if there are any _movie_type_ playing _spatial_relation_
+is _movie_name_ showing at _location_name_
+show the _spatial_relation_ _object_location_type_ that shows _movie_name_
+i want to see _movie_name_ at _location_name_
+is _movie_name_ showing _timeRange_ at the _spatial_relation_ _object_location_type_
+what is the _spatial_relation_ _object_location_type_ with _movie_name_ playing at _timeRange_
+is _movie_name_ showing at _location_name_
+fine the _object_type_ for the _location_name_
+give me the _object_type_ _spatial_relation_
+find the _object_type_ at the _location_name_
+show me the _movie_type_ at _location_name_
+what _movie_type_ at _location_name_
+i want a _object_type_
+can i get the _object_type_
+i want to see _movie_name_
+can i get the _object_type_ for _movie_type_ _spatial_relation_
+may i have the _object_type_ for _location_name_
+find _movie_type_ _spatial_relation_
+is _movie_name_ showing in _location_name_
+what are the _object_type_ _spatial_relation_
+check the _object_type_ for _location_name_
+check the timings for _movie_name_ at the _spatial_relation_ _object_location_type_
+what are the _object_type_ at _location_name_
+i need _movie_type_ _spatial_relation_
+show the _object_type_ _spatial_relation_
+where s the _spatial_relation_ _object_location_type_ showing foreign _movie_type_
+what _movie_type_ are showing _timeRange_ at the _spatial_relation_ _object_location_type_
+is _movie_name_ playing
+i need a list of _location_name_ _object_type_
+when is _movie_name_ playing at the _spatial_relation_ _object_location_type_
+find the _object_type_ at _location_name_
+find the _movie_type_ at _location_name_
+show the _movie_type_ playing _spatial_relation_
+i want to see _movie_name_
+show me _location_name_ _object_type_
+is _movie_name_ showing at _timeRange_
+is _movie_name_ showing at _location_name_
+find the _object_type_ for _location_name_
+i want to see _movie_name_
+find the _object_type_ at _location_name_
+will _movie_name_ be playing at _timeRange_
+show me the _object_type_ for _location_name_ for only _movie_type_
+find the _object_type_ for _movie_name_
+give me the _movie_type_ _spatial_relation_
+what _movie_type_ are playing _spatial_relation_
+is _movie_name_ playing
+what s the _object_type_ for _location_name_
+find the _object_type_ _spatial_relation_
+i want to see _movie_name_
+show me the _object_type_ of movie _movie_name_ near _object_location_type_
+i need _object_type_ for _movie_name_ at _location_name_
+find the _object_type_ at _location_name_
+show me the _object_type_ _spatial_relation_
+show me the _object_type_ for _movie_type_ _spatial_relation_
+show the _object_type_ for _movie_type_ _spatial_relation_
+is _movie_name_ playing at _location_name_
+can you check the timings for _movie_name_
+is _movie_name_ playing in any _object_location_type_
+what _object_type_ will _movie_name_ be showing at my _object_location_type_
+show the _movie_name_ _object_type_ at the _spatial_relation_ _object_location_type_
+what are some _spatial_relation_ _movie_type_ showing
+_object_type_ _spatial_relation_ for _movie_type_
+what _movie_type_ are playing _spatial_relation_
+find the _object_type_ _spatial_relation_
+is _movie_name_ playing
+is _movie_name_ showing at the _spatial_relation_ _object_location_type_ at _timeRange_
+what are the _object_type_
+where can i find the _object_type_
+find the _object_type_ for _location_name_ _timeRange_
+find the _spatial_relation_ _object_location_type_ with _movie_type_ playing
+what are the _object_type_
+what are the _object_type_ for _movie_name_
+what _movie_type_ are playing _spatial_relation_
+is any _object_location_type_ playing _movie_name_
+what are the _object_type_ for _movie_type_ _spatial_relation_
+what s the _object_type_ at _location_name_
+show the _object_type_ for _movie_name_ at _location_name_
+i want to see _movie_name_ at a _object_location_type_
