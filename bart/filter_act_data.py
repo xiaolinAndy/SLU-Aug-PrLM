@@ -25,14 +25,15 @@ def convert_label(label):
             last_label = 'O'
     return label
 
-def match_value(slot, value, raw, label):
+def match_value(slot, value, raw, label, args):
     flag = False
     new_label = label.copy()
     compare_count = 0
     # atis
-    #slot = slot_change['_'.join(slot)]
-    # snips
-    slot = '_'.join(slot)
+    if 'atis' in args.raw_file:
+        slot = slot_change['_'.join(slot)]
+    else:
+        slot = '_'.join(slot)
     for i, w in enumerate(raw):
         if w == value[compare_count] and label[i] == 'O':
             if compare_count == 0:
@@ -59,7 +60,7 @@ def too_short(raw, tmp_values):
     else:
         return False
 
-def filter_data(acts, raws, slot_dict):
+def filter_data(acts, raws, slot_dict, args):
     slot_values_dict = []
     for k, v in slot_dict.items():
         slot_values_dict += v
@@ -88,7 +89,7 @@ def filter_data(acts, raws, slot_dict):
         if flag:
             continue
         for slot, value in slot_values:
-            label, flag = match_value(slot, value, raw, label)
+            label, flag = match_value(slot, value, raw, label, args)
             if not flag:
                 break
         else:
@@ -208,7 +209,7 @@ if __name__ == '__main__':
     data = transfer_separate_data(args.raw_file, args.label_file)
     slot_dict = get_slot_dict(data)
 
-    gen_data = filter_data(act_data, augment_data, slot_dict)
+    gen_data = filter_data(act_data, augment_data, slot_dict, args)
     gen_data = clean_repeat(raw_data, delex_data, gen_data)
 
 
